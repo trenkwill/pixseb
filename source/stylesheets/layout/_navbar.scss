@@ -1,0 +1,25 @@
+
+// BOOTSTRAP'S NAVIGATION OVERIDE 
+.navbar {
+  background: #fff;
+  background: rgba(255, 255, 255, .95);
+  border-bottom: solid 1px $gray;
+
+  &-brand {
+    padding: 10px 15px;
+  }
+
+}
+
+.nav-link {
+  text-transform: uppercase;
+  color: $gray;
+  font-weight: 300;
+  .active &{
+    background: $blue;
+    color: #fff;
+    &:hover {
+      background: darken($blue, 10);
+    }
+  }
+}
