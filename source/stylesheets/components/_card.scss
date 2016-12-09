@@ -1,43 +1,10 @@
 .card {
-	background: #fff;
-	border: solid 1px $gray;
-	border-radius: 6px;
-	text-align: center;
-	padding: 20px;
-	height: 300px;
 	text-decoration: none;
-	margin-bottom: 20px;
-	box-shadow: 0 1px 3px rgba(0,0,0,.1);
-	transition: all 0.2s ease-in-out;
-	&:hover {
-		box-shadow: 0 10px 20px rgba(0,0,0,.1);
-		transform: scale(1.005);
-	}
-	
-	// modifiers
-	&--selected {
-		border: solid 1px $blue;
-	}
-	&--outfit {
-		height: auto;
-		text-align: left;
-		padding: 10px;
-		@extend .clearfix;
-	}
-	&--no-effect:hover {
-		box-shadow: 0 1px 3px rgba(0,0,0,.1);
-		transform: scale(1);
-	}
-
-
-	// element
-	&__outfit-img {
+	display: flex;
+	background: #FFFFFF;
+	box-shadow: 0 2px 2px 0 rgba(18,25,34,0.22);
+	&__left {
 		float: left;
-	}
-	&__avatar {
-		display: block;
-		margin: auto;
-		width: 150px;
 	}
 
 	&__title {

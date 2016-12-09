@@ -1,18 +1,18 @@
-
-// big fat title
-.main-title {
-	text-transform: uppercase;
-	color: $blue;
-	font-size: 55px;
-	font-weight: 300;
-}
-
 // overide bootstrap
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, label {
-	font-weight: 300;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, label, p {
 	margin: 0;
 }
 
-a {
-	text-decoration: none !important;
+.fa-1 {
+	font-size: 1em;
+}
+.fa-2 {
+	font-size: 2em;
+}
+.fa-3 {
+	font-size: 3em;
+}
+
+.color-white {
+	color: #fff;
 }

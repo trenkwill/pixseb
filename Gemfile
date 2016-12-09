@@ -11,3 +11,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
+
+gem 'bootstrap-sass', '3.3.7'
+gem 'font-awesome-sass', '4.7.0'
