@@ -1,0 +1,8 @@
+<div class="card">
+	<p class="text-bold color-grey pl pt pr">Progress</p>
+	<p class="pl pb pr"><span class="text-bold color-blue"><%= percentage %>%  :</span> <span class="color-grey"><%= step_name %></span></p>
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="<%= percentage %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= percentage %>%;">
+	  </div>
+	</div>
+</div>
