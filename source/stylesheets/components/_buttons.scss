@@ -1,0 +1,39 @@
+.btn {
+	border-radius: 30px;
+	&--plus {
+		position: relative;
+		left: 35px;
+		color: $blue;
+		&:hover {
+			color: darken($blue, 20);
+			&:before {
+				background: darken($blue, 20);
+			}
+		}
+		&:active {
+			box-shadow: none;
+		}
+		&:before {
+			content:"+";
+			position: absolute;
+			color: #fff;
+			display: block;
+			left: -35px;
+			top: -3px;
+			width: 36px;
+			height: 36px;
+			background: $blue;
+			line-height: 36px;
+			text-align: center;
+			border-radius: 50%;
+		}
+	}
+}
+
+.btn-blue-2 {
+	border: solid 1px #fff;
+	background: $blue-2;
+	&:hover, &:active {
+		color: #fff;
+	}
+}

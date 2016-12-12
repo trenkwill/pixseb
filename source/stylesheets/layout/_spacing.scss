@@ -1,16 +1,6 @@
 // spacing helpers
 
-.m0{margin: 0px !important;}
-.mt0{margin-top: 0px !important;}
-.mb0{margin-bottom: 0px !important;}
-.ml0{margin-left: 0px !important;}
-.mr0{margin-right: 0px !important;}
 
-.p0{padding: 0px !important;}
-.pt0{padding-top: 0px !important;}
-.pb0{padding-bottom: 0px !important;}
-.pl0{padding-left: 0px !important;}
-.pr0{padding-right: 0px !important;}
 
 .m\-\-{margin: 5px !important;}
 .mt\-\-{margin-top: 5px !important;}
@@ -23,6 +13,12 @@
 .mb\-{margin-bottom: 10px !important;}
 .ml\-{margin-left: 10px !important;}
 .mr\-{margin-right: 10px !important;}
+
+.p\-\-{padding: 5px !important;}
+.pt\-\-{padding-top: 5px !important;}
+.pb\-\-{padding-bottom: 5px !important;}
+.pl\-\-{padding-left: 5px !important;}
+.pr\-\-{padding-right: 5px !important;}
 
 .p\-{padding: 10px !important;}
 .pt\-{padding-top: 10px !important;}
@@ -53,4 +49,17 @@
 .pb\+{padding-bottom: 40px !important;}
 .pl\+{padding-left: 40px !important;}
 .pr\+{padding-right: 40px !important;}
+
+
+.m0{margin: 0px !important;}
+.mt0{margin-top: 0px !important;}
+.mb0{margin-bottom: 0px !important;}
+.ml0{margin-left: 0px !important;}
+.mr0{margin-right: 0px !important;}
+
+.p0{padding: 0px !important;}
+.pt0{padding-top: 0px !important;}
+.pb0{padding-bottom: 0px !important;}
+.pl0{padding-left: 0px !important;}
+.pr0{padding-right: 0px !important;}
 

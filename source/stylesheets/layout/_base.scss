@@ -1,3 +1,30 @@
 body {
-	color: darken($gray, 20);
+	color: $grey;
+	background: #EBEFF1;
+}
+
+.added {
+	position: relative;
+	left: 35px;
+	color: $green;
+	padding: 6px 12px;
+	&__check {
+		position: absolute;
+		color: $green	;
+		display: block;
+		left: -35px;
+		top: -3px;
+		width: 36px;
+		height: 36px;
+		border: solid 1px $green;
+		line-height: 36px;
+		text-align: center;
+		border-radius: 50%;
+	}
+}
+
+.drop-area {
+	background: rgba(174,185,191,0.20);
+	border: 2px dashed rgba(22,114,188,0.50);
+	border-radius: 2px;
 }

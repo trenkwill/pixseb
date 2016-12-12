@@ -33,6 +33,11 @@ end
 #     "Helping"
 #   end
 # end
+helpers do
+  def is_page_active(page)
+    current_page.url == page ? 'active' : ''
+  end
+end
 
 # Build-specific configuration
 configure :build do
@@ -42,3 +47,5 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+

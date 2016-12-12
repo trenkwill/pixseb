@@ -29,3 +29,43 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+.bg-dark-blue-2 {
+  background: #17212A;
+}
+.bg-pink {
+	background: $pink;
+}
+.bg-green {
+	background: $green;
+}
+
+.border-radius {
+	border-radius: 6px;
+}
+
+.label {
+	padding: 10px 20px;
+	border-radius: 30px;
+	white-space: inherit;
+	text-align: left;
+	&-default {
+		box-shadow: 0 1px 2px 0 rgba(22,114,188,0.40);
+		color: $grey;
+	}
+	&__text {
+		max-width: 130px;
+		display: inline-block;
+	}
+}
+
+
+.icon-circle {
+	font-size: 30px;
+	background: #D6DCDF;
+	color:$grey;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+}

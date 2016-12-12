@@ -6,11 +6,13 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= current_page.data.title || "Pixseb" %></title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.standalone.min.css">
     
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
@@ -18,26 +20,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/css/bootstrap-slider.min.css">
   </head>
 
-  <body class="<%= page_classes %> bg-grey-light">
+  <body class="<%= page_classes %>">
 
-      <nav class="navbar navbar-default bg-faded mb0">
-          <a class="navbar-brand" href="#">Pixseb</a>
+      <nav class="navbar navbar-primary bg-faded mb0">
+          <%= link_to("Pixseb", "index.html" , class:"navbar-brand text-uppercase") %>
+          <a class="navbar-brand pl0" href="#">
+          <% if current_page.data.menu_title %>
+          <i class="ionicons ion-chevron-right color-grey-light mr-"></i>
+          <% end %>
+          <%= current_page.data.menu_title %>
+          </a>
           <ul class="nav navbar-nav pull-right">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-info"></i>Help</a>
+              <a class="nav-link p text-medium" href="#"><i class="ionicons ion-chatbox-working color-grey-light mr- pull-left" style="font-size: 24px;"></i>Help</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle p text-medium" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN <i class="ionicons ion-chevron-down color-grey-light ml-"></i></a>
+              <div class="dropdown-menu p">
+                <ul class="list-unstyled">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">EN</a>
+              <a class="nav-link p" href="#">
+                <div class="badge-container">
+                  <i class="fa fa-bell"></i>
+                  <span class="badge">3</span>
+                </div>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-bell"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link clearfix pt0 pb0" href="#">
                   
-                <%= image_tag "http://placehold.it/50x50", class:"img-circle pull-left mr-" %>
+                <%= image_tag "http://placehold.it/62x62", class:"pull-left mr-" %>
               
-                <div class="pull-left">INSA Strasbourg <br>Denis C.</div>
+                <div class="pull-left"><p class="small color-grey-light mt-">INSA Strasbourg</p> <p class="text-medium">Denis C.</p></div>
               </a>
             </li>
           </ul>
@@ -48,52 +67,66 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/bootstrap-slider.min.js"></script>
-    
-    <%= javascript_include_tag "Chart.bundle.min.js" %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/bootstrap-slider.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="javascripts/jquery.FloatLabel.js"></script>
+    <!-- <script src="javascripts/Chart.bundle.min.js"></script> -->
+  
+    
     <script>
       $('.slider').slider({
         formatter: function(value) {
           return 'Current value: ' + value;
         }
       });
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-          type: 'pie',
-          data: {
-              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-              datasets: [{
-                  label: '# of Votes',
-                  data: [12, 19, 3, 5, 2, 3],
-                  backgroundColor: [
-                      'rgba(255, 99, 132, 1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(255, 206, 86, 1)',
-                      'rgba(75, 192, 192, 1)',
-                      'rgba(153, 102, 255, 1)',
-                      'rgba(255, 159, 64, 1)'
-                  ],
-                  borderColor: [
-                      'rgba(255,99,132,1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(255, 206, 86, 1)',
-                      'rgba(75, 192, 192, 1)',
-                      'rgba(153, 102, 255, 1)',
-                      'rgba(255, 159, 64, 1)'
-                  ]
-              }]
-          },
-          options: {
-              scales: {
-                 disaply: false
-              },
-              legend: {
-                display: false
-              }
 
-          }
-      });
+      // this enables the inputs to have the labels in it, 
+      // and when clicked animates the label to the top
+      $( '.js-float-label-wrapper' ).FloatLabel();
+
+
+      $('.datepicker').datepicker();
+
+      // var ctx = document.getElementById("myChart");
+      // var myChart = new Chart(ctx, {
+      //     type: 'pie',
+      //     data: {
+      //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      //         datasets: [{
+      //             label: '# of Votes',
+      //             data: [12, 19, 3, 5, 2, 3],
+      //             backgroundColor: [
+      //                 'rgba(255, 99, 132, 1)',
+      //                 'rgba(54, 162, 235, 1)',
+      //                 'rgba(255, 206, 86, 1)',
+      //                 'rgba(75, 192, 192, 1)',
+      //                 'rgba(153, 102, 255, 1)',
+      //                 'rgba(255, 159, 64, 1)'
+      //             ],
+      //             borderColor: [
+      //                 'rgba(255,99,132,1)',
+      //                 'rgba(54, 162, 235, 1)',
+      //                 'rgba(255, 206, 86, 1)',
+      //                 'rgba(75, 192, 192, 1)',
+      //                 'rgba(153, 102, 255, 1)',
+      //                 'rgba(255, 159, 64, 1)'
+      //             ]
+      //         }]
+      //     },
+      //     options: {
+      //         scales: {
+      //            disaply: false
+      //         },
+      //         legend: {
+      //           display: false
+      //         }
+
+      //     }
+      // });
     </script>
 
 
