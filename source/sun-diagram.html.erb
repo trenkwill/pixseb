@@ -1,0 +1,39 @@
+<%= partial "partials/second-nav" %>
+
+<div class="row no-gutter bg-dark-blue-2">
+
+    <div class="col-sm-8">
+      <div class="sundiagram">
+        <%= image_tag("sun-diagram.svg", class:"panzoom") %>
+      </div>
+      
+    </div>
+
+
+    <div class="col-sm-4">
+
+      <div class="p+">
+          <p class="h1 color-white mb">Ranking</p>
+          <ul class="rankings">
+            <li class="rankings__1">TC1</li>
+            <li class="rankings__4">TC4</li>
+            <li class="rankings__3">TC3</li>
+            <li class="rankings__2">TC2</li>
+            <li class="rankings__5">TC5</li>
+          </ul>
+
+
+          <div class="buttons">
+            <button class="zoom-in">Zoom In</button>
+            <button class="zoom-out">Zoom Out</button>
+            <input type="range" class="zoom-range">
+            <button class="reset">Reset</button>
+          </div>
+      </div>
+
+    </div>
+</div>
+
+
+
+<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "export.html", :link_back => "sun-diagram.html" } %>

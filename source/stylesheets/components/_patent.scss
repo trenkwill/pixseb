@@ -1,0 +1,10 @@
+.patent{
+	@extend .p\-; 
+	@extend .pl;
+	@extend .pr;
+	@extend .df;
+	@extend .at-c;
+	color:white;
+	border-left: solid 2px $green;
+	margin-bottom: 1px;
+} 
