@@ -37,8 +37,8 @@
         </ul>
     </div>
 
-  <div class="row">
-    <div class="col-sm-8">
+  <div class="row df">
+    <div class="col-sm-8 pr0">
           <div class="df card card--separator pl pr pt- pb-">
                 <div class="card__file">
                   <span></span>
@@ -94,23 +94,34 @@
                     <p class="text-uppercase color-grey-light font-14 pull-left">DUPONT PATRICK [FR]; JACQUINET PHILIPPE [FR] <br> + VALEO SECURITE HABITACLE</p>
                       
                       <a href="#" class="btn btn--plus pull-right">Add</a>
-                                    </div>
+                  </div>
+
                   </div>
               </div>
           <% end %>
     </div>
-    <div class="col-sm-4">
-      <div class="bg-black p">
-          <% for i in 0..2 do %>
-            <div class="card bg-grey mb-">
-              <div class="card__left bg-grey p">
-                <i class="fa fa-file-image-o color-white"></i>
-              </div>
-              <div class="card__body p- color-white">
-                
-                <p>Positive retraction latch locking dog for a rotating control …</p>
+    <div class="col-sm-4 df pl0">
+      <div class="bg-dark-blue-2">
+          
+         <div class="p">
+            <input id="patents-meter" />
+           
+           <div class="number-of-patents">
+             <p class="number-of-patents__number">3</p>
+             <p>more patents for an <br>
+               optimal selection</p>
+           </div>
+           
+           <h2 class="h1 color-green text-condensed mb">27 Selected patents</h2>
+         </div>
 
-              </div>
+          <% for i in 1..9 do %>
+            <div class="patent" style="background: rgba(0,162,151, 0.<%=i*10%>); ">
+
+                <i class="fa fa-file-text-o fa-2 pull-left mr"></i>
+                <p>Positive retraction latch locking dog for a rotating control …</p>
+                <i class="ionicons ion-close"></i>
+
             </div>
           <% end %>
       </div>

@@ -1,65 +1,137 @@
-<div class="panel panel-default p">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8">
-        <p class="text-left mb-"><strong>Selection > Categorizarion > Connection PBSOL > Contradictions > Business Drivers ></strong> Evaluation criteria > Evaluation</p>
-        <p class="text-left">
-          Select a variety of relevant patents for the project
-        </p>
+<%= partial "partials/second-nav" %>
+
+<div class="container mt mb+">
+    <div class="row no-gutter">
+      <div class="col-sm-9">
+        <ul class="breadcrumbs">
+          <li>Sélection</li>
+          <li>Categorizarion</li>
+          <li>Extraction</li>
+          <li>Contradictions</li>
+          <li class="active">Business Drivers</li>
+          <li class="next">Evaluation criteria</li>
+          <li class="next">Evaluation</li>
+        </ul>
+        <p class="text-left text-italic color-grey text-light mt-">Adjust and evaluate the importance of your business drivers</p>
       </div>
-      <div class="col-sm-4">
-          Progress <br>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-              60% Complete
-            </div>
-          </div>
+      <div class="col-sm-3">
+          <%= partial "partials/progress", :locals => { :percentage => "60", :step_name => "Patent analysis" } %>
       </div>
-    </div>
   </div>
 </div>
 
+
 <div class="container">
-  <div class="row">
+  <div class="row no-gutter">
     <div class="col-sm-8">
-      <div class="clearfix mb">
-        <div class="pull-left">
-          12 business drivers
-        </div>
-        <div class="pull-right">
-          <a href="#" class="btn btn-default">Edit</a>
+
+      <div class="card card--separator p pt+">
+
+        <div class="clearfix">
+          <h1 class="pull-left text-bold">
+            12 business drivers
+          </h1>
+          <div class="pull-right">
+            <a href="#" class="btn btn-default color-blue">Edit</a>
+          </div>
         </div>
       </div>
-      
-      <a href="#" class="btn btn-success btn-lg btn-block mb">Add a business driver</a>
 
-      <% for i in 0..4 do %>
-        <div class="panel bg-grey mb- p">
-            <div class="clearfix">
-              <div class="pull-left">Operating effort</div>
-              
-              <div class="pull-right">
-                <input class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-              </div>
+      <div class="card card--separator p">
+        <a href="#" class="btn btn--plus">Add a business driver</a>
+      </div>
+        
+        
+      <div class="card card--separator p">
+
+          <div class="clearfix">
+            <div class="pull-left">Operating effort</div>
+            
+            <div class="pull-right">
+              <input class="slider" data-slider-id='slider-green' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
             </div>
-          
-        </div>
-      <% end %>
+          </div>
+        
+      </div>
+
+
+      <div class="card card--separator p">
+
+          <div class="clearfix">
+            <div class="pull-left">Noise</div>
+            
+            <div class="pull-right">
+              <input class="slider" data-slider-id='slider-orange' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="card card--separator p">
+
+          <div class="clearfix">
+            <div class="pull-left">Product cost</div>
+            
+            <div class="pull-right">
+              <input class="slider" data-slider-id='slider-purple' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="card card--separator p">
+
+          <div class="clearfix">
+            <div class="pull-left">Fail safe</div>
+            
+            <div class="pull-right">
+              <input class="slider" data-slider-id='slider-turquoise' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="card card--separator p">
+
+          <div class="clearfix">
+            <div class="pull-left">Space Roominess</div>
+            
+            <div class="pull-right">
+              <input class="slider" data-slider-id='slider-blue' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+            </div>
+          </div>
+        
+      </div>
+      
 
     </div>
     <div class="col-sm-4">
-      <div class="bg-black p">
+      <div class="bg-dark-blue-2 p pt+">
+
+        <p class="h1 color-white mb+">Your distribution</p>
           
-        <canvas id="myChart" width="400" height="400"></canvas>
+          <canvas id="myChart" width="400" height="400"></canvas>
 
         <div class="color-white mt">
-            <p>Your distribution</p>
-            <ul>
-              <li>Operating effort : 7%</li>
-              <li>Noise : 7%</li>
-              <li>Product cost : 7%</li>
-              <li>Fail Safe : 7%</li>
-              <li>Space Roominess : 7%</li>
+            <ul class="list-unstyled text-light">
+              <li>
+                <span class="dot mr- bg-green"></span> Operating effort : 7%
+              </li>
+              <li>
+                <span class="dot mr- bg-pink"></span> Noise : 7%
+              </li>
+              <li>
+                <span class="dot mr- bg-orange"></span> Product cost : 7%
+              </li>
+              <li>
+                <span class="dot mr- bg-purple"></span> Fail Safe : 7%
+              </li>
+              <li>
+                <span class="dot mr- bg-turquoise"></span> Space Roominess : 7%
+              </li>
+              <li>
+                <span class="dot mr- bg-blue"></span> Space Roominess : 7%
+              </li>
             </ul>
         </div>
           
@@ -69,14 +141,64 @@
 </div>
 
 
+<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-6.html", :link_back => "analysis-3.html" } %>
 
-<nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="pull-left">
-    <i class="fa fa-arrow-left"></i>
-    <%= link_to("Back", "transition.html") %>
-  </div>
-  <div class="pull-right">
-    Last modified on 03/12/2017 at 12:17,
-    By Denis C. - INSA
-      <%= link_to("Continue", "transition-5.html", class:"btn btn-primary btn-lg") %></div>
-</nav>
+
+
+<script src="javascripts/Chart.bundle.min.js"></script>
+  
+    
+    <script>
+ var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+              // labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+              datasets: [{
+                  label: '',
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, .5)',
+                      'rgba(54, 162, 235, .5)',
+                      'rgba(255, 206, 86, .5)',
+                      'rgba(75, 192, 192, .5)',
+                      'rgba(153, 102, 255, .5)',
+                      'rgba(255, 159, 64, .5)'
+                  ],
+                  hoverBackgroundColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 4,
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ]
+              }]
+          },
+          options: {
+              tooltips: {
+                enabled: false,
+                backgroundColor: 'rgba(0,0,0,0)'
+              },
+              legend: {
+                  enabled: false,
+              },
+              scales: {
+                 display: false
+              },
+              legend: {
+                display: false
+              }
+
+          }
+      });
+</script>

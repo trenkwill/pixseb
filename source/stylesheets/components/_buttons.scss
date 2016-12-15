@@ -1,7 +1,19 @@
 .btn {
 	border-radius: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+	&.active {
+		background: $blue;
+		color: #fff;
+		&:hover, &:active, &:focus {
+			background: $blue;
+			color: #fff;
+		}
+	}
 	&--plus {
 		position: relative;
+		padding-left: 10px;
+		padding-right: 0;
 		left: 35px;
 		color: $blue;
 		&:hover {
@@ -30,9 +42,16 @@
 	}
 }
 
-.btn-blue-2 {
+.btn-outline {
 	border: solid 1px #fff;
-	background: $blue-2;
+	background: none;
+	&:hover, &:active {
+		color: #fff;
+	}
+}
+.btn-outline-grey {
+	border: solid 1px $grey-light;
+	background: none;
 	&:hover, &:active {
 		color: #fff;
 	}

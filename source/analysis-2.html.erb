@@ -54,19 +54,34 @@
     </div>
     <div class="col-sm-4 df pl0">
       <div class="bg-dark-blue-2 p f-1-0-auto">
-        <div class="clearfix">
-          <p class="color-white pull-left mb">Suggested categories</p>
-          <a href="#" class="pull-right color-white">Edit</a>
+        <div class="clearfix mb">
+          <p class="h1 color-white mb+">Suggested categories</p>
+          <a href="#" class="btn btn-outline color-white">Edit</a>
         </div>
           <% for i in 0..6 do %>
               
               <div class="clearfix">
-                <span class="label label-primary pull-left mr- mb- df at-c">
-                  <i class="ionicons ion-pricetag color-grey-light mr- font-14 pull-left"></i>
+                <span class="label label-primary mr- mb- pull-left">
+                  <i class="ionicons ion-pricetag color-blue-3 mr- font-14 pull-left"></i>
                   <span class="label__text">LER Pawl on excentric + 2nd pawl</span>
-                  <i class="ionicons ion-android-close pull-right color-grey-light font-14 ml"></i>
                 </span>
-                <div class="pull-left color-blue text-condensed font-14"><%= Random.rand(30) %></div>
+                <div class="color-blue text-condensed font-14 mt- pull-left"><%= Random.rand(30) %></div>
+              </div>
+
+              <div class="clearfix">
+                <span class="label label-primary mr- mb- pull-left">
+                  <i class="ionicons ion-pricetag color-blue-3 mr- font-14 pull-left"></i>
+                  <span class="label__text">Store enery in spring</span>
+                </span>
+                <div class="color-blue text-condensed font-14 mt- pull-left"><%= Random.rand(30) %></div>
+              </div>
+
+              <div class="clearfix">
+                <span class="label label-primary mr- mb- pull-left">
+                  <i class="ionicons ion-pricetag color-blue-3 mr- font-14 pull-left"></i>
+                  <span class="label__text">2nd pawl</span>
+                </span>
+                <div class="color-blue text-condensed font-14 mt- pull-left"><%= Random.rand(30) %></div>
               </div>
 
           <% end %>

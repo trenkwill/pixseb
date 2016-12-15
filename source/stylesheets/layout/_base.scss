@@ -2,7 +2,16 @@ body {
 	color: $grey;
 	background: #EBEFF1;
 }
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
 
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
 .added {
 	position: relative;
 	left: 35px;
@@ -10,7 +19,7 @@ body {
 	padding: 6px 12px;
 	&__check {
 		position: absolute;
-		color: $green	;
+		color: $green;
 		display: block;
 		left: -35px;
 		top: -3px;
@@ -27,4 +36,102 @@ body {
 	background: rgba(174,185,191,0.20);
 	border: 2px dashed rgba(22,114,188,0.50);
 	border-radius: 2px;
+	width: 100%;
+	min-height: 100px;
+}
+.dot {
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+// Paddings
+.padded {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+// Backgrounds
+.bg-white {
+	background: #fff;
+}
+.bg-black {
+  background: #4a4a4a;
+}
+.bg-grey {
+  background: #aeaeae;
+}
+.bg-grey-light {
+  background: #eee;
+}
+.bg-blue {
+  background: #00a3e1;
+}
+.bg-blue-2 {
+  background: #3477A1;
+}
+.bg-dark-blue {
+  background: #3b5998;
+}
+.bg-dark-blue-2 {
+  background: #17212A;
+}
+.bg-pink {
+	background: $pink;
+}
+.bg-green {
+	background: $green;
+}
+.bg-orange {
+	background: $orange;
+}
+.bg-purple {
+	background: $purple;
+}
+.bg-turquoise {
+	background: $turquoise;
+}
+
+.rankings {
+	list-style: none;
+	padding: 0;
+	li {
+		background: #1C2731;
+		padding: 5px 10px;
+	}
+	&__1 {
+		border-left: solid 1px $turquoise;
+	}
+	&__2 {
+		border-left: solid 1px $purple;
+	}
+	&__3 {
+		border-left: solid 1px $green;
+	}
+	&__4 {
+		border-left: solid 1px $pink;
+	}
+	&__5 {
+		border-left: solid 1px $orange;
+	}
+}
+
+.border-radius {
+	border-radius: 6px;
+}
+.dot {
+	width:10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.icon-circle {
+	font-size: 30px;
+	background: #D6DCDF;
+	color:$grey;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
 }

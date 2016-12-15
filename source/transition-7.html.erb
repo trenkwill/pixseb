@@ -1,25 +1,23 @@
-  <div class="container">
+  <div class="container mt">
     <div class="row">
-      <div class="col-sm-8">
-        
+      <div class="col-sm-9">
+        <ul class="breadcrumbs">
+          <li>Sélection</li>
+          <li>Categorizarion</li>
+          <li>Extraction</li>
+          <li>Contradictions</li>
+          <li class="active">Business Drivers</li>
+          <li class="next">Evaluation criteria</li>
+          <li class="next">Evaluation</li>
+        </ul>
       </div>
-      <div class="col-sm-4">
-          Progress <br>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-              <span>70% Complete</span>
-            </div>
-          </div>
+      <div class="col-sm-3">
+          <%= partial "partials/progress", :locals => { :percentage => "80", :step_name => "Patent analysis" } %>
       </div>
-    </div>
+  </div>
   </div>
 
-<div class="text-center padded"><%= image_tag "pixseb-logo.jpeg", width:"300" %></div>
+<div class="text-center padded"><%= image_tag "transition.png", width:"230" %></div>
 
 
-<nav class="navbar navbar-default navbar-fixed-bottom">
-	<div class="pull-right">
-		Saving…
-		By Denis C. - INSA
-		  <%= link_to("Please wait...", "sun-diagram.html", class:"btn btn-primary btn-lg") %></div>
-</nav>
+<%= partial "partials/action-bar", :locals => { :text => "Saving...",:text2 => "Par Denis C. - INSA", :link => "sun-diagram.html", :link_back => "analysis-7.html" } %>
