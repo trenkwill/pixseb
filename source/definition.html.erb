@@ -102,3 +102,12 @@ menu_title: E-Latch
 
 <%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-1.html", :link_back => "index.html" } %>
 
+<%= partial "partials/javascripts" %>
+
+<script>
+
+  $('.datepicker').datepicker();
+
+  $( '.js-float-label-wrapper' ).FloatLabel();
+</script>
+

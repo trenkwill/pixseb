@@ -13,7 +13,7 @@
           <li class="next">Evaluation criteria</li>
           <li class="next">Evaluation</li>
         </ul>
-        <p class="text-left text-italic color-grey text-light mt-">Select a variety of relevant patents for the project</p>
+        <p class="text-left text-italic color-grey text-light mt-">Adjust the problems and solutions relevant to the project. Possible links : PB-PB and PB-SOL. Impossible links : SOL-SOL</p>
       </div>
       <div class="col-sm-3">
           <%= partial "partials/progress", :locals => { :percentage => "40", :step_name => "Patent analysis" } %>
@@ -25,17 +25,17 @@
 
 <div class="container mb+ pb+">
 
+  <svg height="0px">
+    <defs>
+        <linearGradient x1="-0.130867472%" y1="100%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EC335E" stop-opacity="0.496659873" offset="0%"></stop>
+            <stop stop-color="#00A197" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+  </svg>
 
-
-
-
-
-
-
-
-
-  <div class="row df mb+ pb+">
-    <div class="col-sm-6 df pr0">
+  <div class="mb+ pb+ df">
+    <div class="pull-left jsplumb-container  pr0 df">
       <div class="bg-white p+">
         <div class="clearfix mb mt">
           <h1 class="pull-left text-bold">81 Problems</h1>
@@ -43,19 +43,14 @@
         </div>
         <a href="#" class="btn btn--plus mb+">Add a problem</a>
         
-          <!-- <div class="jtk-demo-canvas canvas-wide drag-drop-demo jtk-surface jtk-surface-nopan" id="canvas">
-            <div class="mini-card mini-card--pink" id="dragDropWindow1">one<br/><br/><a href="#" class="cmdLink hide" rel="dragDropWindow1">toggle connections</a><br/><a href="#" class="cmdLink drag" rel="dragDropWindow1">disable dragging</a><br/><a href="#" class="cmdLink detach" rel="dragDropWindow1">detach all</a></div>
-            <div class="mini-card mini-card--pink" id="dragDropWindow2">two<br/><br/><a href="#" class="cmdLink hide" rel="dragDropWindow2">toggle connections</a><br/><a href="#" class="cmdLink drag" rel="dragDropWindow2">disable dragging</a><br/><a href="#" class="cmdLink detach" rel="dragDropWindow2">detach all</a></div>
-            <div class="mini-card mini-card--pink" id="dragDropWindow3">three<br/><br/><a href="#" class="cmdLink hide" rel="dragDropWindow3">toggle connections</a><br/><a href="#" class="cmdLink drag" rel="dragDropWindow3">disable dragging</a><br/><a href="#" class="cmdLink detach" rel="dragDropWindow3">detach all</a></div>
-            <div class="mini-card mini-card--pink" id="dragDropWindow4">four<br/><br/><a href="#" class="cmdLink hide" rel="dragDropWindow4">toggle connections</a><br/><a href="#" class="cmdLink drag" rel="dragDropWindow4">disable dragging</a><br/><a href="#" class="cmdLink detach" rel="dragDropWindow4">detach all</a></div>
-            <div id="list"></div>
-            </div> -->
-          <div class="mini-card mini-card--pink selected df at-c mb- p+ mr">
+        <% for i in 0..5 do %>
+
+          <div class="mini-card mini-card--pink  at-c mb- p+ mr df" id="node<%= i %>">
       
               <div class="mini-card__content">
-                <i class="fa fa-puzzle-piece fa-2 color-white pull-left"></i>
+                <i class="fa fa-puzzle-piece fa-2 pull-left"></i>
                 
-                <p class="pull-left color-white">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
+                <p class="pull-left">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
               </div>
               
               <div class="mini-card__anchor" id="a">
@@ -63,158 +58,41 @@
               </div>
           </div>
         
-
-        
-          <div class="mini-card mini-card--pink df at-c mb- p+ mr">
-      
-              <div class="mini-card__content">
-                <i class="fa fa-puzzle-piece fa-2 color-white pull-left"></i>
-                
-                <p class="pull-left">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                <!-- <%= image_tag("LINKS.png", class:"connectors") %> -->
-              </div>
-
-              <div class="mini-card__anchor" id="b">
-                <span></span>
-              </div>
-      
-          </div>
+          <% end %>
         
       </div>
 
     </div>
+    
+    
 
+    <div class="pull-left jsplumb-container bg-dark-blue-2 pl0">
 
-    <div class="col-sm-6 df pl0">
-      <div class="bg-dark-blue-2 p+">
+  
+      <div class=" p+">
           <div class="clearfix mb mt">
             <h1 class="text-bold pull-left color-white">81 partial solutions</h1>
             <div class="pull-right"><a href="#" class="btn btn-default bg-dark-blue-2 color-white">Edit</a></div>
           </div>
 
           <a href="#" class="btn btn--plus mb+">Add a problem</a>
-
-            <div class="mini-card mini-card--green selected mini-card df at-c mb- p+">
-
-                  <div class="mini-card__content">
-                    <i class="fa fa-lightbulb-o color-white pull-left fa-2"></i>
-                    
-                    <p class="pull-left color-white">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                  </div>
-
-                  <div class="mini-card__anchor">
-                    <span></span>
-                  </div>
-
-            </div>
-
-          
               
-              <div class="mini-card mini-card--green  df at-c mb- p+">
+              <% for i in 6..10 do %>
+              <div class="mini-card mini-card--green mini-card mb- p+ df" id="node<%= i %>">
 
                     <div class="mini-card__content">
-                      <i class="fa fa-lightbulb-o color-green pull-left fa-2"></i>
+                      <i class="fa fa-lightbulb-o pull-left fa-2"></i>
                       
-                      <p class="pull-left color-green">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                    </div>
-                    
-                    <div class="mini-card__anchor" >
-                      <span></span>
+                      <p class="pull-left">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
                     </div>
 
-              </div>
-
-              
-              <div class="mini-card mini-card--green  df at-c mb- p+">
-
-                    <div class="mini-card__content">
-                      <i class="fa fa-lightbulb-o color-green pull-left fa-2"></i>
-                      
-                      <p class="pull-left color-green">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                    </div>
-                    
                     <div class="mini-card__anchor">
                       <span></span>
                     </div>
 
               </div>
-
+              <% end %>
               
-              <div class="mini-card mini-card--green  df at-c mb- p+">
-
-                    <div class="mini-card__content">
-                      <i class="fa fa-lightbulb-o color-green pull-left fa-2"></i>
-                      
-                      <p class="pull-left color-green">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                    </div>
-                    
-                    <div class="mini-card__anchor">
-                      <span></span>
-                    </div>
-
-              </div>
-
-              
-              <div class="mini-card mini-card--green  df at-c mb- p+">
-
-                    <div class="mini-card__content">
-                      <i class="fa fa-lightbulb-o color-green pull-left fa-2"></i>
-                      
-                      <p class="pull-left color-green">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                    </div>
-                    
-                    <div class="mini-card__anchor">
-                      <span></span>
-                    </div>
-
-              </div>
-
-              
-              <div class="mini-card mini-card--green  df at-c mb- p+">
-
-                    <div class="mini-card__content">
-                      <i class="fa fa-lightbulb-o color-green pull-left fa-2"></i>
-                      
-                      <p class="pull-left color-green">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                    </div>
-                    
-                    <div class="mini-card__anchor">
-                      <span></span>
-                    </div>
-
-              </div>
-
-              
-              <div class="mini-card mini-card--green  df at-c mb- p+" >
-
-                    <div class="mini-card__content">
-                      <i class="fa fa-lightbulb-o color-green pull-left fa-2"></i>
-                      
-                      <p class="pull-left color-green">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                    </div>
-                    
-                    <div class="mini-card__anchor">
-                      <span></span>
-                    </div>
-
-              </div>
-
-              
-              <div class="mini-card mini-card--green  df at-c mb- p+">
-
-                    <div class="mini-card__content">
-                      <i class="fa fa-lightbulb-o color-green pull-left fa-2"></i>
-                      
-                      <p class="pull-left color-green">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
-                    </div>
-                    
-                    <div class="mini-card__anchor">
-                      <span></span>
-                    </div>
-
-              </div>
-
-          
       </div>
     </div>
   </div>
@@ -238,7 +116,46 @@
 </nav>
 
 
-<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-4.html", :link_back => "analysis-3.html" } %>
+<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-4.html", :link_back => "analysis-2.html" } %>
 
 
+<%= partial "partials/javascripts" %>
 
+<script>
+  jsPlumb.setContainer($(".jsplumb-container"));
+
+  jsPlumb.ready(function(){
+     
+     var endpointsPink = {
+      endpoint: ["Dot",{radius: 20}],
+      isSource: true,
+      isTarget: true,
+      connector: ["Bezier", {curviness: 50}],
+      connectorStyle: { strokeStyle:"url(#linearGradient-1)", lineWidth: 3 },
+      connectorOverlays: [ [ "Arrow", { location:1 } ] ],
+      maxConnections: 5
+    };
+
+    var endpointsGreen = {
+      endpoint: ["Dot",{radius: 20}],
+      isSource: true,
+      isTarget: true,
+      connector: ["Bezier", {curviness: 50}],
+      connectorStyle: { strokeStyle:"url(#linearGradient-1)", lineWidth: 3 },
+      connectorOverlays: [ [ "Arrow", { location:1 } ] ],
+      maxConnections: 5
+    };
+    
+    var anchorRight = [{anchor:"Right"}];
+    var anchorLeft = [{anchor:"Left"}];
+
+    jsPlumb.addEndpoints($(".mini-card--pink"), anchorRight, endpointsPink);
+    jsPlumb.addEndpoints($(".mini-card--green"), anchorLeft, endpointsGreen);
+  });
+
+  jsPlumb.repaintEverything();
+
+  $(window).resize(function(){
+        jsPlumb.repaintEverything();
+    });
+</script>

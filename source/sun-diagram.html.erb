@@ -1,10 +1,10 @@
 <%= partial "partials/second-nav" %>
 
-<div class="row no-gutter bg-dark-blue-2">
+<div class="row no-gutter bg-dark-blue-2 df">
 
     <div class="col-sm-8">
-      <div class="sundiagram">
-        <%= image_tag("sun-diagram.svg", class:"panzoom") %>
+      <div class="sun-diagram__main">
+        <%= image_tag("sun-diagram.svg", class:"js-panzoom") %>
       </div>
       
     </div>
@@ -12,8 +12,10 @@
 
     <div class="col-sm-4">
 
-      <div class="p+">
+      <div class="p+ sun-diagram__column">
+          
           <p class="h1 color-white mb">Ranking</p>
+
           <ul class="rankings">
             <li class="rankings__1">TC1</li>
             <li class="rankings__4">TC4</li>
@@ -23,11 +25,28 @@
           </ul>
 
 
-          <div class="buttons">
-            <button class="zoom-in">Zoom In</button>
-            <button class="zoom-out">Zoom Out</button>
-            <input type="range" class="zoom-range">
-            <button class="reset">Reset</button>
+          <div class="list-inline">
+            <li>
+              <a href="#" class="sun-diagram__zoom-out js-zoom-out">
+                <i class="ionicons ion-minus"></i>
+              </a>
+            </li>
+            <li>
+              <input type="range" class="sun-diagram__zoom-range js-zoom-range">
+            </li>
+            <li>
+              <a href="#" class="sun-diagram__zoom-in js-zoom-in">
+                <i class="ionicons ion-plus"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sun-diagram__reset js-reset">
+                <i class="ionicons ion-android-refresh"></i>
+              </a>
+            </li>
+          </div>
+          <div class="sun-diagram__mini-map">
+              <div class="rectangle"></div>
           </div>
       </div>
 
@@ -36,4 +55,29 @@
 
 
 
-<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "export.html", :link_back => "sun-diagram.html" } %>
+<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "export.html", :link_back => "analysis-8.html" } %>
+
+<%= partial "partials/javascripts" %>
+
+<script>
+  (function() {
+      var $section = $('body');
+      $section.find('.js-panzoom').panzoom({
+        $zoomIn: $section.find(".js-zoom-in"),
+        $zoomOut: $section.find(".js-zoom-out"),
+        $zoomRange: $section.find(".js-zoom-range"),
+        $reset: $section.find(".js-reset"),
+        startTransform: 'scale(1.1)',
+        increment: 0.1,
+        minScale: 1,
+        contain: 'automatic'
+      }).panzoom('zoom');
+    })();
+
+     // $('.js-zoom-range').slider({
+     //    formatter: function(value) {
+     //      return 'Current value: ' + value;
+     //    }
+     //  });
+
+</script>

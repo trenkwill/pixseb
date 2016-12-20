@@ -49,10 +49,27 @@
 		color: #fff;
 	}
 }
+
+.btn-white {
+	background: #fff;
+	color: $blue-2;
+	&:hover, &:active {
+		color: $blue-2;
+	}
+}
 .btn-outline-grey {
 	border: solid 1px $grey-light;
 	background: none;
 	&:hover, &:active {
-		color: #fff;
+		border: solid 1px darken($grey-light, 20);
+		color: $blue;
+	}
+}
+.btn-outline-blue {
+	border: solid 1px $blue;
+	background: none;
+	&:hover, &:active {
+		border: solid 1px darken($grey-light, 20);
+		color: $blue;
 	}
 }

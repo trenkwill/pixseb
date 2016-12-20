@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div class="col-sm-3">
-          <%= partial "partials/progress", :locals => { :percentage => "60", :step_name => "Patent analysis" } %>
+          <%= partial "partials/progress", :locals => { :percentage => "20", :step_name => "Patent analysis" } %>
       </div>
   </div>
 </div>
@@ -132,3 +132,19 @@
 
 
 <%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-2.html", :link_back => "analysis.html" } %>
+
+
+<%= partial "partials/javascripts" %>
+
+<script>
+
+  $("#patents-meter").myfunc({
+    divFact:10,
+    eventListenerType:'keyup',
+    initDeg : 25
+  });
+  
+  // this enables the inputs to have the labels in it, 
+  // and when clicked animates the label to the top
+  $( '.js-float-label-wrapper' ).FloatLabel();
+</script>
