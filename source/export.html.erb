@@ -1,0 +1,50 @@
+<%= partial "partials/second-nav" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card p+ mb+">
+            <p>Le rapport complet <br>
+              format PDF A4</p>
+      </div>
+      <div class="card p+ mb+">
+            <p>Export XML</p>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card p+ mb+">
+            <p>Juste le diagramme PDF <br>
+Haute définition pour impression murale</p>
+      </div>
+      <div class="card p+ mb+">
+            <p>Export XML</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= partial "partials/javascripts" %>
+
+<script>
+  (function() {
+      var $section = $('body');
+      $section.find('.js-panzoom').panzoom({
+        $zoomIn: $section.find(".js-zoom-in"),
+        $zoomOut: $section.find(".js-zoom-out"),
+        $zoomRange: $section.find(".js-zoom-range"),
+        $reset: $section.find(".js-reset"),
+        startTransform: 'scale(1.1)',
+        increment: 0.1,
+        minScale: 1,
+        contain: 'automatic'
+      }).panzoom('zoom');
+    })();
+
+     // $('.js-zoom-range').slider({
+     //    formatter: function(value) {
+     //      return 'Current value: ' + value;
+     //    }
+     //  });
+
+</script>

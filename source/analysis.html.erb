@@ -1,3 +1,7 @@
+---
+title: Pixseb | Analysis
+---
+
 <%= partial "partials/second-nav" %>
 
 <div class="container mt mb+">
@@ -22,11 +26,16 @@
 <div class="container mb+ pb+">
 
     <div class="card p mb">
-        <div class="row mb">
-          <div class="col-sm-10">
-            <input type="search" name="" id="input" class="form-control search-input" value="Keywords, patent number"  title="">
+        <div class="search mb">
+          <div class="js-float-label-wrapper">
+            <label for="search-input">Keywords, patent number</label>
+            <input type="search" name="" id="input" class="form-control search__input"  title="">
           </div>
-          <a href="#" class="btn btn-primary col-sm-2"><i class="ionicons ion-ios-search-strong search-icon"></i>Search</a>
+          
+          <a href="#" class="btn btn-primary search__btn">
+            <i class="ionicons ion-ios-search-strong search__icon"></i>
+            Search
+          </a>
         </div>
         <ul class="list-inline">
           <li><a href="">International <i class="fa fa-angle-down"></i></a></li>
@@ -39,24 +48,7 @@
 
   <div class="row df">
     <div class="col-sm-8 pr0">
-          <div class="df card card--separator pl pr pt- pb-">
-                <div class="card__file">
-                  <span></span>
-                  <i class="fa fa-file-text-o color-grey fa-2"></i>
-                </div>
-                <div class="p">
-                  
-                  <h3 class="text-bold h4 mb color-blue-dark">Electric power assisted door lock</h3>
-                  
-                  <p class="mb">With the door closed, the bolt-plate (2) notch (9) retains the door-jamb hasp bar (11,13), since the catch (3) prevents the forces opposed by the return spring (14) and compressed peripheral door seal (16) from rotating (F3)…</p>
-                
-                  <div class="clearfix">
-                    <p class="text-uppercase color-grey-light font-14 pull-left">DUPONT PATRICK [FR]; JACQUINET PHILIPPE [FR] <br> + VALEO SECURITE HABITACLE</p>
-                      
-                      <span class="added pull-right"><span class="added__check"><i class="ionicons ion-android-done"></i></span>Added</span>
-                  </div>
-                </div>
-              </div>
+          
           <% for i in 0..2 do %>
               <div class="df card card--separator pl pr pt- pb-">
                 <div class="card__file" style="background-image: url(images/plan.png);">
@@ -72,7 +64,7 @@
                   <div class="clearfix">
                     <p class="text-uppercase color-grey-light font-14 pull-left">DUPONT PATRICK [FR]; JACQUINET PHILIPPE [FR] <br> + VALEO SECURITE HABITACLE</p>
                       
-                      <a href="#" class="btn btn--plus pull-right">Add</a>
+                      <a href="#" class="btn btn--plus pull-right mr js-add-patent">Add</a>
                   </div>
                   </div>
               </div>
@@ -93,7 +85,7 @@
                   <div class="clearfix">
                     <p class="text-uppercase color-grey-light font-14 pull-left">DUPONT PATRICK [FR]; JACQUINET PHILIPPE [FR] <br> + VALEO SECURITE HABITACLE</p>
                       
-                      <a href="#" class="btn btn--plus pull-right">Add</a>
+                      <a href="#" class="btn btn--plus pull-right mr js-add-patent">Add</a>
                   </div>
 
                   </div>
@@ -104,26 +96,38 @@
       <div class="bg-dark-blue-2">
           
          <div class="p">
-            <input id="patents-meter" />
+
+
+            <div id="speedometer">
+              <div class="speedometer__envelope">
+                <div class="speedometer__speednobe">
+                  <div></div>
+                </div>
+                <div class="speedometer__speedposition"></div>
+              </div>
+             <div class="speedometer__number-of-patents">
+               <p class="speedometer__number-of-patents__number">0</p>
+               <p>more patents for an <br>
+                 optimal selection</p>
+             </div>
+            </div>
            
-           <div class="number-of-patents">
-             <p class="number-of-patents__number">3</p>
-             <p>more patents for an <br>
-               optimal selection</p>
-           </div>
            
            <h2 class="h1 color-green text-condensed mb">27 Selected patents</h2>
          </div>
 
-          <% for i in 1..9 do %>
-            <div class="patent" style="background: rgba(0,162,151, 0.<%=i*10%>); ">
+         <div class="patents">
+           <% for i in 1..4 do %>
+             <div class="patent">
+           
+                 <i class="fa fa-file-text-o fa-2 pull-left mr"></i>
+                 <p>Positive retraction latch locking dog for a rotating control …</p>
+                 <i class="ionicons ion-close"></i>
+           
+             </div>
+           <% end %>
+          </div>
 
-                <i class="fa fa-file-text-o fa-2 pull-left mr"></i>
-                <p>Positive retraction latch locking dog for a rotating control …</p>
-                <i class="ionicons ion-close"></i>
-
-            </div>
-          <% end %>
       </div>
     </div>
   </div>
@@ -131,7 +135,7 @@
 
 
 
-<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-2.html", :link_back => "analysis.html" } %>
+<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-2.html", :link_back => "definition.html" } %>
 
 
 <%= partial "partials/javascripts" %>
@@ -143,7 +147,24 @@
     eventListenerType:'keyup',
     initDeg : 25
   });
-  
+
+  function addPatent() {
+    var i = 25;
+    var j = 0;
+    $(".js-add-patent").click(function(event){
+      event.preventDefault();
+      var deg = i += 20;
+      var inc = j += 1;
+      var html = $("<div class='patent'><i class='fa fa-file-text-o fa-2 pull-left mr'></i><p>Positive retraction latch locking dog for a rotating control …</p><i class='ionicons ion-close'></i></div>").addClass("animated zoomInDown");
+      $(".patents").append(html);
+      $(this).fadeOut().replaceWith(" <span class='added pull-right'><span class='added__check'><i class='ionicons ion-android-done'></i></span>Added</span>");
+      $(".speedometer__number-of-patents__number").html(inc);
+      $(".speedometer__speednobe").css("transform", 'rotate('+deg+'deg)');
+    });
+  }
+
+  addPatent();
+
   // this enables the inputs to have the labels in it, 
   // and when clicked animates the label to the top
   $( '.js-float-label-wrapper' ).FloatLabel();

@@ -71,11 +71,21 @@
               </a>
               <div class="dropdown-menu p">
                 <ul class="list-unstyled">
-                  <li><a href="" class="dropdown-item">Profile</a></li>
-                  <li><a href="" class="dropdown-item">Password</a></li>
-                  <li><a href="" class="dropdown-item">Notifications</a></li>
-                  <li><a href="" class="dropdown-item">Team</a></li>
-                  <li><a href="" class="dropdown-item">Data settings</a></li>
+                  <li>
+                    <%= link_to("Profile", "account.html#profile" , class:"dropdown-item") %>
+                  </li>
+                  <li>
+                    <%= link_to("Password", "account.html#password" , class:"dropdown-item") %>
+                  </li>
+                  <li>
+                    <%= link_to("Notifications", "account.html#notifications" , class:"dropdown-item") %>
+                  </li>
+                  <li>
+                    <%= link_to("Team", "account.html#team" , class:"dropdown-item") %>
+                  </li>
+                  <li>
+                    <%= link_to("Data Setting", "account.html#data-setting" , class:"dropdown-item") %>
+                  </li>
                   <hr>
                   <li><a href="" class="dropdown-item color-pink mb0">Disconect</a></li>
                 </ul>

@@ -141,13 +141,19 @@
 </div>
 
 
-<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-6.html", :link_back => "analysis-3.html" } %>
+<%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-6.html", :link_back => "analysis-4.html" } %>
 
 
 
 <%= partial "partials/javascripts" %>
     
 <script>
+
+$('.slider').slider({
+    formatter: function(value) {
+      return 'Current value: ' + value;
+    }
+  });
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
       type: 'doughnut',
@@ -243,9 +249,5 @@
       }
   });
 
-  $('.slider').slider({
-    formatter: function(value) {
-      return 'Current value: ' + value;
-    }
-  });
+  
 </script>

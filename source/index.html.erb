@@ -2,52 +2,54 @@
 title: Welcome to Pixseb
 ---
 	
-<nav class="navbar index__navbar  mb0">
-    <%= link_to("Pixseb", "index.html" , class:"navbar-brand text-uppercase") %>
-    <a class="navbar-brand pl0" href="#">
-    <% if current_page.data.menu_title %>
-    <i class="ionicons ion-chevron-right color-grey-light mr-"></i>
-    <% end %>
-    <%= current_page.data.menu_title %>
-    </a>
-    <ul class="nav navbar-nav pull-left">
-      <li class="nav-item">
-        <a class="nav-link p text-medium" href="/home.html">Concept</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link p text-medium" href="/home.html">Testimonials</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link p text-medium" href="/home.html">Team</a>
-      </li>
-
-    </ul>
-    <ul class="nav navbar-nav pull-right">
-
-      <li class="nav-item">
-        <a class="nav-link p text-medium" href="/home.html">Pricing</a>
-      </li>
-
-	  <li class="nav-item">
-        <a class="nav-link p text-medium" href="/home.html">En</a>
-      </li>
-
-      <a href="#signup" class="nav-item btn btn-outline color-white"  data-toggle="modal">Sign up</a>
-
-      <a href="#login" class="nav-item btn btn-round btn-white" data-toggle="modal">Login</a>
-
-    </ul>
-    
-</nav>
+<div class="container">
+	<nav class="navbar index__navbar  mb0">
+	    <%= link_to("Pixseb", "index.html" , class:"navbar-brand text-uppercase mt--") %>
+	    <a class="navbar-brand pl0" href="#">
+	    <% if current_page.data.menu_title %>
+	    <i class="ionicons ion-chevron-right color-grey-light mr-"></i>
+	    <% end %>
+	    <%= current_page.data.menu_title %>
+	    </a>
+	    <ul class="nav navbar-nav pull-left">
+	      <li class="nav-item">
+	      	<%= link_to("Concept", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to("Testimonials", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to("Team", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	
+	    </ul>
+	    <ul class="nav navbar-nav pull-right">
+	
+	      <li class="nav-item">
+	     	 <%= link_to("Pricing", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	
+		  <li class="nav-item">
+		  <%= link_to("EN", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	
+	      <a href="#signup" class="nav-item btn btn-outline color-white"  data-toggle="modal">Sign up</a>
+	
+	      <a href="#login" class="nav-item btn btn-round btn-white" data-toggle="modal">Login</a>
+	
+	    </ul>
+	    
+	</nav>
+</div>
 	
 	
 <div class="container">
 	<div class="row">
 		<div class="padded">
 			<h1>Analysis. Visualize. Innovate.</h1>	
-			<p class="text-center color-white"><strong>Pilotage de l’innovation par l’extraction Sémantique des contenus Brevets</strong> <br> (Driving innovation through the semantic extraction of patent content)</p>
+			<p class="text-center color-white font-18"><strong>Pilotage de l’innovation par l’extraction Sémantique des contenus Brevets</strong> <br> (Driving innovation through the semantic extraction of patent content)</p>
 		</div>
-		<div class="index__main-image padded">
+		<div class="index__main-image mb+">
 
 			<%= image_tag("main-screen.png") %>
 			
@@ -57,19 +59,175 @@ title: Welcome to Pixseb
 
 <div class="index__banner">
 	<h2 class="color-pink text-uppercase mr">Free beta now</h2>
-	<a href="#" class="btn bg-pink color-white">Sign in</a>
+	<a href="#" class="btn bg-pink btn-lg color-white">Sign in</a>
 </div>
 
 <div class="bg-white padded">
 
 	<h2 class="color-blue text-center text-condensed">Concept</h2>
-	<div class="padded"></div>
+	<div class="container">
+		<div class="padded text-center">
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<%= image_tag("analysis.png", width:"80", class:"mb") %>
+					<h2 class="h1 mb">Analysis</h2>
+					<p>From a base of 10,000 patents *. Semantic extraction & piloted analysis.</p>
+				</div>
+				<div class="col-sm-4">
+					<%= image_tag("pixseb-logo.jpeg", width:"150", class:"mb") %>
+					<h2 class="h1 mb">Visualiser</h2>
+					<p>The SUN Diagram © to visualize its competitors and drive its innovation</p>
+				</div>
+				<div class="col-sm-4">
+					<%= image_tag("presentation-icon.png", width:"80", class:"mb") %>
+					<h2 class="h1 mb">Visualiser</h2>
+					<p>Working with others. Export the complete report. Print The SUN Diagram © in poster. It's planned !</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>
 
 
+<div class=" padded">
+
+	
+	<div class="container">
+
+        <div class="text-center">
+          <h2 class="color-white text-center text-condensed mb+">Testimonials</h2>
+        </div>
+        <div class="row mb+">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="index__testimonials">
+             <blockquote class="index__blockquote"> "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur laudantium blanditiis, ratione asperiores nam quod odio a molestiae, neque corporis praesentium, esse enim consequatur, numquam earum velit ea voluptatem."</blockquote>
+              <div class="index__testimonials__avatar">
+              
+              	<%= image_tag("face-1.jpg", width:"80", class:"mb img-circle pull-left") %>
+
+                <div class="pull-left ml- mt- color-white">
+                  <p class="m0">Robert Orterb</p>
+                  <p class="small-text">Titre lorem ispum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="index__testimonials">
+             <blockquote class="index__blockquote"> "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur laudantium blanditiis, ratione asperiores nam quod odio a molestiae, neque corporis praesentium, esse enim consequatur, numquam earum velit ea voluptatem."</blockquote>
+              <div class="index__testimonials__avatar">
+
+              	<%= image_tag("face-2.jpg", width:"80", class:"mb img-circle pull-left") %>
+
+                <div class="pull-left ml- mt- color-white">
+                  <p class="m0">Robert Orterb</p>
+                  <p class="small-text">Titre lorem ispum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <ul class="index__spread mb+ pb+">
+            <li>
+            	<%= image_tag("facebook-2.png", height:"80") %>
+            </li>
+            <li>
+            	<%= image_tag("dropbox.png", height:"80") %>
+            </li>
+            <li>
+            	<%= image_tag("apple.png", height:"80") %>
+            </li>
+            <li>
+            	<%= image_tag("microsoft.png", height:"80") %>
+            </li>
+            <li>
+            	<%= image_tag("google-2.png", height:"80") %>
+            </li>            
+          </ul>
+
+    </div>
+
+</div>
+
+
+<div class="bg-white padded">
+
+	
+	<div class="container">
+      
+      <div class="text-center mt+">
+        <h2 class="mb">About the Pixseb Team</h2>
+        <p class="white">Lorem ipsum dolor sit amet, brconsectetur adipiscing elit. <br>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan <br>et viverra justo commodo. Proin <a href="#" class="white">read more</a></p>
+      </div>
+
+      <ul class="index__spread mb+">
+      	<% for i in 1..5 do %>
+        <li class="text-center">
+        	<%= image_tag("face-#{i}.jpg", height:"80", class:"mb- img-circle") %>
+          <div>
+            Jean Robert
+            <div class="small-text">Titre lorem ipsum</div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+      
+    </div>
+
+</div>
+
+<div class="container">
+	<nav class="navbar index__navbar  mb0">
+	    <%= link_to("Pixseb", "index.html" , class:"navbar-brand text-uppercase mt--") %>
+	    <a class="navbar-brand pl0" href="#">
+	    <% if current_page.data.menu_title %>
+	    <i class="ionicons ion-chevron-right color-grey-light mr-"></i>
+	    <% end %>
+	    <%= current_page.data.menu_title %>
+	    </a>
+	    <ul class="nav navbar-nav pull-left">
+	      <li class="nav-item">
+	      	<%= link_to("Press", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to("Privacy", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to("Terms", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to("Help center", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to("Contact", "home.html" , class:"nav-link p text-medium") %>
+	      </li>
+
+	    </ul>
+	    <ul class="nav navbar-nav pull-right mt">
+
+	      <li class="nav-item">
+	      	<span class="nav-link p text-medium color-white">Follow Us</span>
+	      </li>
+
+		  <li class="nav-item">
+		  	<span class="nav-link p text-medium color-white"><%= image_tag("twitter-round.png", height:"30") %></span>
+	      </li>
+
+	      <li class="nav-item">
+		  	<span class="nav-link p text-medium color-white"><%= image_tag("linedin-round.png", height:"30") %></span>
+	      </li>
+
+	    </ul>
+	    
+	</nav>
+</div>
+
+
 <div class="modal fade " id="login">
-    <div class="modal-dialog home__modal">
+    <div class="modal-dialog index__modal">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close btn btn-default" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -77,11 +235,11 @@ title: Welcome to Pixseb
           <h4 class="modal-title text-center">Connect to INOVIZ</h4>
         </div>
         <div class="modal-body">
-          <div class="home__alert clearfix mb-">
+          <div class="index__alert clearfix mb-">
             <p class="small-text">Identifiant et/ou mot de passe invalide</p>
             <a href="#" class="small-text">Oublié ?</a>
           </div>
-          <form action="" class="home__form">
+          <form action="" class="index__form">
             <div class="input-wrap js-float-label-wrapper">
               <label for="">Indentifiant</label>
               <input type="text" name="id" id="id" class="form-control">
@@ -106,10 +264,10 @@ title: Welcome to Pixseb
             <a value="Login" class="btn btn-lg btn-round btn-blue white p- pl+ pr+">New user ? Sign up</a>
             <div class="text-center mt mb">Or sign up with</div>
             <div class="clearfix">
-              <a href="#" class="home__social home__social--facebook"><img src="images/facebook.png" alt="facebook"></a>
-              <a href="#" class="home__social home__social--linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
-              <a href="#" class="home__social home__social--google"><img src="images/google.png" alt="google"></a>
-              <a href="#" class="home__social home__social--linkedin"><img src="images/twitter.png" alt="twitter"></a>
+              <a href="#" class="index__social index__social--facebook"><img src="images/facebook.png" alt="facebook"></a>
+              <a href="#" class="index__social index__social--linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
+              <a href="#" class="index__social index__social--google"><img src="images/google.png" alt="google"></a>
+              <a href="#" class="index__social index__social--linkedin"><img src="images/twitter.png" alt="twitter"></a>
             </div>
           </div>
         </div>
@@ -119,7 +277,7 @@ title: Welcome to Pixseb
 
 
   <div class="modal fade " id="signup">
-    <div class="modal-dialog home__modal">
+    <div class="modal-dialog index__modal">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close btn btn-default" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -133,11 +291,11 @@ title: Welcome to Pixseb
             <li class="mb-">Bénéfice : lorem ipsum dolor sit amet</li>
           </ul>
           <!-- Alert is hidden (display none) -->
-          <div class="home__alert clearfix mb-">
+          <div class="index__alert clearfix mb-">
             <p class="small-text">Identifiant et/ou mot de passe invalide</p>
             <a href="#" class="small-text">Oublié ?</a>
           </div>
-          <form action="" class="home__form">
+          <form action="" class="index__form">
             <div class="input-wrap js-float-label-wrapper">
               <label for="">Prénom</label>
               <input type="text" name="firstname" id="firstname" class="form-control">
@@ -174,10 +332,10 @@ title: Welcome to Pixseb
             <a value="Login" class="btn btn-lg btn-round btn-blue white p- pl+ pr+">Already a user ? Login</a>
             <div class="text-center mt mb">Or login with</div>
             <div class="clearfix">
-              <a href="#" class="home__social home__social--facebook"><img src="images/facebook.png" alt="facebook"></a>
-              <a href="#" class="home__social home__social--linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
-              <a href="#" class="home__social home__social--google"><img src="images/google.png" alt="google"></a>
-              <a href="#" class="home__social home__social--linkedin"><img src="images/twitter.png" alt="twitter"></a>
+              <a href="#" class="index__social index__social--facebook"><img src="images/facebook.png" alt="facebook"></a>
+              <a href="#" class="index__social index__social--linkedin"><img src="images/linkedin.png" alt="linkedin"></a>
+              <a href="#" class="index__social index__social--google"><img src="images/google.png" alt="google"></a>
+              <a href="#" class="index__social index__social--linkedin"><img src="images/twitter.png" alt="twitter"></a>
             </div>
           </div>
         </div>

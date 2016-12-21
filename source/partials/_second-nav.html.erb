@@ -2,59 +2,50 @@
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="nav-item <%= is_page_active('/definition.html') %>">
-        <a class="nav-link" href="#">Definition</a>
+        <a class="nav-link" href="#">Definition <i class="ionicons ion-checkmark"></i></a>
       </li>
-      <% if current_page.url == '/analysis.html' %>
-      <li class="nav-item <%= is_page_active('/analysis.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
-      </li>
-      <% end %>
+     
       <% if current_page.url == '/analysis-2.html' %>
       <li class="nav-item <%= is_page_active('/analysis-2.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i>
+        </a>
       </li>
-      <% end %>
-      <% if current_page.url == '/analysis-3.html' %>
+      <% elsif current_page.url == '/analysis-3.html' %>
       <li class="nav-item <%= is_page_active('/analysis-3.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
       </li>
-      <% end %>
-      <% if current_page.url == '/analysis-4.html' %>
+      <% elsif current_page.url == '/analysis-4.html' %>
       <li class="nav-item <%= is_page_active('/analysis-4.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
       </li>
-      <% end %>
-      <% if current_page.url == '/analysis-5.html' %>
+      <% elsif current_page.url == '/analysis-5.html' %>
       <li class="nav-item <%= is_page_active('/analysis-5.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
       </li>
-      <% end %>
-      <% if current_page.url == '/analysis-6.html' %>
+      <% elsif current_page.url == '/analysis-6.html' %>
       <li class="nav-item <%= is_page_active('/analysis-6.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
       </li>
-      <% end %>
-      <% if current_page.url == '/analysis-7.html' %>
+      <% elsif current_page.url == '/analysis-7.html' %>
       <li class="nav-item <%= is_page_active('/analysis-7.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
       </li>
-      <% end %>
-      <% if current_page.url == '/analysis-8.html' %>
+      <% elsif current_page.url == '/analysis-8.html' %>
       <li class="nav-item <%= is_page_active('/analysis-8.html') %>">
-        <a class="nav-link" href="#">Analysis</a>
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
       </li>
       <% else %>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Analysis</a>
+      <li class="nav-item <%= is_page_active('/analysis.html') %>">
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
       </li>
       <% end %>
       
       <li class="nav-item <%= is_page_active('/sun-diagram.html') %>">
-        <a class="nav-link" href="#">SUN Diagram</a>
+        <a class="nav-link" href="#">SUN Diagram <i class="ionicons ion-checkmark"></i></a>
       </li>
       
       <li class="nav-item <%= is_page_active('/export.html') %>">
-        <a class="nav-link" href="#">Export</a>
+        <a class="nav-link" href="#">Export <i class="ionicons ion-checkmark"></i></a>
       </li>
     </ul>
     <span class="pull-right mt-">

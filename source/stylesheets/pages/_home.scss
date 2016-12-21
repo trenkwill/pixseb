@@ -39,7 +39,97 @@
 		display: flex;
 		justify-content: center;
 		background: #182A36;
-		padding: 40px 0;
+		padding: 100px 0;
+		align-items: center;
 		text-align: center;
+	}
+
+
+	&__testimonials {
+		background: #fff;
+		padding: 30px 60px;
+		line-height: 2;
+		border-radius: 100px;
+		margin-bottom: 100px;
+		&__avatar {
+			position: absolute;
+			bottom: 15px;
+			left: 80px;
+			img {
+				margin-top: -10px;
+			}
+		}
+	}
+	&__blockquote {
+		font-size: 14px;
+		border: none;
+		padding: 0;
+		margin-top: 20px;
+	}
+
+	&__spread {
+		margin-top: 70px;
+		padding-left: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		@media (max-width: $screen-sm-min) { 
+			flex-direction: column;
+			align-items: center;
+			li {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	&__modal {
+		width: 340px;
+		.modal-content {
+			border-radius: 0;
+		}
+	}
+	&__alert {
+		background: $orange;
+		color: #fff;
+		display: none;
+		p {
+			margin: 5px 0 5px 10px;
+			float: left;
+		}
+		a {
+			background: darken($grey, 20);
+			color: #fff;
+			float: right;
+			padding: 6px 10px;
+		}
+	}
+	&__form {
+		input[type="text"], input[type="password"], input[type="email"] {
+			border: solid 1px $grey;
+			margin-top: -1px;
+		}
+	}
+	&__social {
+		text-align: center;
+		background: #000;
+		padding: 15px;
+		float: left;
+		margin-right: 7px;
+		width: 70px;
+		&--facebook {
+			background: #3b5998;
+		}
+		&--twitter {
+			background: #06B2F5;
+		}
+		&--linkedin {
+			background: #0493D7;
+		}
+		&--google {
+			background: #2293E8;
+		}
+		img {
+			height: 30px;
+		}
 	}
 }

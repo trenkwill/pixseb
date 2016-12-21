@@ -1,0 +1,27 @@
+.account {
+	&__tabs {
+		list-style: none;
+		li {
+			background: $grey;
+			border-left: solid 7px $grey;
+			&:hover {
+				border-left: solid 7px rgba(255, 255, 255, .3);
+			}
+			&.active {
+				border-left: solid 7px #fff;
+			}
+			a {
+				padding: 20px;
+				display: block;
+				color: #fff;
+				text-decoration: none;	
+			}
+		}
+	}
+	&__tabs-content {
+		@extend .clearfix;
+		border: solid 1px $grey;
+		padding: 20px;
+		background: rgba(255, 255, 255, 0.4);
+	}
+} 

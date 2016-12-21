@@ -7,4 +7,10 @@
 	color:white;
 	border-left: solid 2px $green;
 	margin-bottom: 1px;
-} 
+	$elements: 25;
+	@for $i from 0 to $elements {
+	  &:nth-child(#{$i}) {
+	     background: rgba( $green, $i*.1 );
+	  }
+	}
+}

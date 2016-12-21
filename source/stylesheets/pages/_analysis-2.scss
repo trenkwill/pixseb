@@ -1,0 +1,71 @@
+.analysis-2 {
+	.label {
+		cursor: move;
+		cursor: grab;
+		cursor: -moz-grab;
+		cursor: -webkit-grab;
+		position: relative;
+		margin-right: 40px;
+		margin-bottom: 10px;
+		float: left;
+		display: flex;
+		align-items: center;
+		@extend .label-primary;
+		color: #fff;
+		&__number {
+			position: absolute;
+			right: -20px;
+			@extend .color-blue;
+			@extend .text-condensed;
+			@extend .font-14 ;
+		}
+		&__close {
+			@extend .color-grey-light;
+			@extend .font-14;
+			float: right;
+			margin-left: 20px;
+		}
+		&.gu-mirror {
+			background: #fff;
+			box-shadow: 0 0 6px 0 rgba(22,114,188,0.60);
+			color: $blue;
+			opacity: 1 !important;
+			.ionicons {
+				color: $blue;
+			}
+			.label__close, .label__number {
+				display: none;
+			}
+		}
+	}
+
+	.drop-area {
+		background: rgba(174,185,191,0.20);
+		border: 2px dashed rgba(22,114,188,0.50);
+		border-radius: 2px;
+		width: 100%;
+		min-height: 100px;
+		&--droping {
+			background: #D0E3F2;
+			border: 2px dashed #1673BC;
+		}
+		// label-primary looks like label-default in drop-area
+		.label-primary {
+			background-color: #fff;
+			box-shadow: 0 1px 2px 0 rgba(22, 114, 188, 0.4);
+			color: #506270;
+			margin-right: 10px;
+			.ionicons {
+				@extend .color-grey-light;
+			}
+			.label__number {
+				display: none;
+			}
+			// show the close x button
+			.ion-android-close {
+				display: inline-block !important;
+			}
+		}
+
+	}
+}
