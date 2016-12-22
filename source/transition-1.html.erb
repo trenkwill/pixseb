@@ -1,15 +1,7 @@
   <div class="container mt">
     <div class="row">
       <div class="col-sm-9">
-        <ul class="breadcrumbs">
-          <li>Sélection</li>
-          <li>Categorizarion</li>
-          <li>Extraction</li>
-          <li>Contradictions</li>
-          <li class="active">Business Drivers</li>
-          <li class="next">Evaluation criteria</li>
-          <li class="next">Evaluation</li>
-        </ul>
+        
       </div>
       <div class="col-sm-3">
           <%= partial "partials/progress", :locals => { :percentage => "10", :step_name => "Patent analysis" } %>
@@ -21,4 +13,15 @@
 <div class="padded"><%= partial "partials/loading" %></div>
 
 
-<%= partial "partials/action-bar", :locals => { :text => "Saving...",:text2 => "Par Denis C. - INSA", :link => "analysis.html", :link_back => "transition-1.html" } %>
+<%= partial "partials/action-bar", :locals => { :text => "Saving...",:text2 => "Par Denis C. - INSA", :link => "analysis.html", :link_back => "definition.html" } %>
+
+
+
+<%= partial "partials/javascripts" %>
+
+<script>
+$(".js-btn-loading").html("Please wait...").addClass("btn-outline color-white").removeClass("bg-white color-blue-2");
+  setTimeout(function(){
+    $(".js-btn-loading").html("Continue").addClass("bg-white color-blue-2").removeClass("btn-outline color-white");
+  }, 3000);
+</script>

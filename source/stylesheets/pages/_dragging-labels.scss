@@ -1,4 +1,4 @@
-.analysis-2 {
+.dragging-labels {
 	.label {
 		cursor: move;
 		cursor: grab;
@@ -45,9 +45,13 @@
 		border-radius: 2px;
 		width: 100%;
 		min-height: 100px;
+
 		&--droping {
 			background: #D0E3F2;
 			border: 2px dashed #1673BC;
+			&#suggested-categories {
+				border: none;	
+			}
 		}
 		// label-primary looks like label-default in drop-area
 		.label-primary {

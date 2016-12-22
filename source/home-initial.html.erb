@@ -1,27 +1,28 @@
-<nav class="navbar navbar-default bg-faded">
-    <ul class="list-inline">
-      <li>
-        <%= link_to("New", "/definition.html" , class:"btn btn-primary") %>
-      </li>
-      <li>
-        Your SUN Diagrams
-      </li>
-      <li class="pull-right">
-        <a class="btn btn-default" href="#">
-          Sort
-        </a>
-        <a class="btn btn-default" href="#">
-            <i class="fa fa-trash"></i>
-        </a>
-      </li>
-    </ul>
-    
+---
+title: Welcome to Pixseb
+---
+
+<nav class="navbar navbar-default navbar-secondary bg-faded pt pb">
+  <div class="container text-center ">
+    <%= link_to("New", "definition.html" , class:"btn btn--plus pull-left") %>
+    <h1 class="text-bold color-grey mt--">Your SUN diagrams</h1>
+  </div>
 </nav>
 
-<div class="padded">
-	<div class="text-center">
-		<h1 class="mb">Start your first SUN Diagram today !</h1>
-		<p class="mb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <br>accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
-		<%= link_to("New", "/definition.html" , class:"btn btn-primary") %>
-	</div>
+
+<div class="container">
+  <div class="row pt+">
+    
+    <div class="padded">
+      <div class="text-center">
+        <h1 class="mb">Start your first SUN Diagram today !</h1>
+        <p class="mb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <br>accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
+        <%= link_to("New", "/definition.html" , class:"btn btn-primary") %>
+      </div>
+    </div>    
+    
+  </div>
 </div>
+
+
+

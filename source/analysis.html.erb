@@ -8,11 +8,11 @@ title: Pixseb | Analysis
     <div class="row">
       <div class="col-sm-9">
         <ul class="breadcrumbs">
-          <li>Sélection</li>
-          <li>Categorizarion</li>
-          <li>Extraction</li>
-          <li>Contradictions</li>
-          <li class="active">Business Drivers</li>
+          <li class="active">Sélection</li>
+          <li class="next">Categorizarion</li>
+          <li class="next">Connection PBSOL</li>
+          <li class="next">Contradictions</li>
+          <li class="next">Business Drivers</li>
           <li class="next">Evaluation criteria</li>
           <li class="next">Evaluation</li>
         </ul>
@@ -26,9 +26,9 @@ title: Pixseb | Analysis
 <div class="container mb+ pb+">
 
     <div class="card p mb">
-        <div class="search mb">
+        <div class="search">
           <div class="js-float-label-wrapper">
-            <label for="search-input">Keywords, patent number</label>
+            <label for="search-input"><span>Keywords, patent number</span></label>
             <input type="search" name="" id="input" class="form-control search__input"  title="">
           </div>
           
@@ -36,14 +36,72 @@ title: Pixseb | Analysis
             <i class="ionicons ion-ios-search-strong search__icon"></i>
             Search
           </a>
+
+          <ul class="search__filters mt">
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">International <i class="ionicons ion-chevron-down ml-"></i></a>
+
+                <div class="dropdown-menu p">
+                  <ul class="list-unstyled">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                  </ul>
+                </div>
+
+            </li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">All fields <i class="ionicons ion-chevron-down ml-"></i></a>
+
+                <div class="dropdown-menu p">
+                  <ul class="list-unstyled">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                  </ul>
+                </div>
+
+            </li>
+            
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">All content <i class="ionicons ion-chevron-down ml-"></i></a>
+
+                <div class="dropdown-menu p">
+                  <ul class="list-unstyled">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                  </ul>
+                </div>
+                
+            </li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Any date <i class="ionicons ion-chevron-down ml-"></i></a>
+
+                <div class="dropdown-menu p">
+                  <ul class="list-unstyled">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                  </ul>
+                </div>
+                
+            </li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort by relevancy <i class="ionicons ion-chevron-down ml-"></i></a>
+
+                <div class="dropdown-menu p">
+                  <ul class="list-unstyled">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                  </ul>
+                </div>
+                
+            </li>
+
+          </ul>
         </div>
-        <ul class="list-inline">
-          <li><a href="">International <i class="fa fa-angle-down"></i></a></li>
-          <li><a href="">All fields <i class="fa fa-angle-down"></i></a></li>
-          <li><a href="">All content <i class="fa fa-angle-down"></i></a></li>
-          <li><a href="">Any date <i class="fa fa-angle-down"></i></a></li>
-          <li><a href="">Sort by relevancy <i class="fa fa-angle-down"></i></a></li>
-        </ul>
+        
     </div>
 
   <div class="row df">
@@ -167,5 +225,6 @@ title: Pixseb | Analysis
 
   // this enables the inputs to have the labels in it, 
   // and when clicked animates the label to the top
-  $( '.js-float-label-wrapper' ).FloatLabel();
+  $(".js-float-label-wrapper").FloatLabel();
+  
 </script>

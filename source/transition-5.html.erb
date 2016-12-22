@@ -5,8 +5,8 @@
           <li>Sélection</li>
           <li>Categorizarion</li>
           <li>Extraction</li>
-          <li>Contradictions</li>
-          <li class="active">Business Drivers</li>
+          <li class="active">Contradictions</li>
+          <li class="next">Business Drivers</li>
           <li class="next">Evaluation criteria</li>
           <li class="next">Evaluation</li>
         </ul>
@@ -21,3 +21,12 @@
 
 
 <%= partial "partials/action-bar", :locals => { :text => "Saving...",:text2 => "Par Denis C. - INSA", :link => "analysis-6.html", :link_back => "analysis-5.html" } %>
+
+<%= partial "partials/javascripts" %>
+
+<script>
+$(".js-btn-loading").html("Please wait...").addClass("btn-outline color-white").removeClass("bg-white color-blue-2");
+  setTimeout(function(){
+    $(".js-btn-loading").html("Continue").addClass("bg-white color-blue-2").removeClass("btn-outline color-white");
+  }, 3000);
+</script>

@@ -6,13 +6,13 @@
         <ul class="breadcrumbs">
           <li>Sélection</li>
           <li class="active">Categorizarion</li>
-          <li>Extraction</li>
-          <li>Contradictions</li>
-          <li>Business Drivers</li>
+          <li class="next">Connection PBSOL</li>
+          <li class="next">Contradictions</li>
+          <li class="next">Business Drivers</li>
           <li class="next">Evaluation criteria</li>
           <li class="next">Evaluation</li>
         </ul>
-        <p class="text-left text-italic color-grey text-light mt-">Select a variety of relevant patents for the project</p>
+        <p class="text-left text-italic color-grey text-light mt-">Tag patents with their technologies</p>
       </div>
       <div class="col-sm-3">
           <%= partial "partials/progress", :locals => { :percentage => "30", :step_name => "Patent analysis" } %>
@@ -20,7 +20,7 @@
   </div>
 </div>
 
-<div class="container mb+ pb+">
+<div class="container dragging-labels mb+ pb+">
   <div class="row df">
     <div class="col-sm-8 pr0">
       <div class="card p card--separator">

@@ -2,11 +2,11 @@
     <div class="row">
       <div class="col-sm-9">
         <ul class="breadcrumbs">
-          <li>Sélection</li>
-          <li>Categorizarion</li>
-          <li>Extraction</li>
-          <li>Contradictions</li>
-          <li class="active">Business Drivers</li>
+          <li class="active">Sélection</li>
+          <li class="next">Categorizarion</li>
+          <li class="next">Connection PBSOL</li>
+          <li class="next">Contradictions</li>
+          <li class="next">Business Drivers</li>
           <li class="next">Evaluation criteria</li>
           <li class="next">Evaluation</li>
         </ul>
@@ -21,3 +21,12 @@
 
 
 <%= partial "partials/action-bar", :locals => { :text => "Saving...",:text2 => "Par Denis C. - INSA", :link => "analysis-2.html", :link_back => "transition-1.html" } %>
+
+<%= partial "partials/javascripts" %>
+
+<script>
+$(".js-btn-loading").html("Please wait...").addClass("btn-outline color-white").removeClass("bg-white color-blue-2");
+  setTimeout(function(){
+    $(".js-btn-loading").html("Continue").addClass("bg-white color-blue-2").removeClass("btn-outline color-white");
+  }, 3000);
+</script>

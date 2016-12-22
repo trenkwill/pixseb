@@ -1,6 +1,6 @@
 .sun-diagram {
 	// background: $blue-dark;
-	&__main {
+	&__frame {
 		height: 100vh;
 		width: 100%;
 		background: #17212A;
@@ -36,17 +36,16 @@
 	}
 
 	&__mini-map {
-		position: absolute;
+		position: relative;
 		border-top: solid 1px #1C2731;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		background: url("../images/mini-map.png") no-repeat center center;
+		background: url("../images/mini-map.png") no-repeat top center;
 		background-size: contain;
 		width: 100%;
-		height: 300px;
+		height: 250px;
+		margin-top: 40px;
 		.rectangle {
 			position: absolute;
+			left: 160px;
 			width: 200px;
 			height: 100px;
 			background: rgba(22,114,188,0.20);

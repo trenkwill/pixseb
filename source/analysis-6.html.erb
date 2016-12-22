@@ -20,24 +20,24 @@
   </div>
 </div>
 
-<div class="container mb+ pb+">
+<div class="container dragging-labels mb+ pb+">
   <div class="row df">
     <div class="col-sm-8 pr0">
       <div class="card p card--separator">
         <h1 class="mt">5 Business drivers</h1>
       </div>
-      
-        <div class="card card--separator p">
+      <% for i in 0..4 do %>
+        <div class="df card card--separator p">
           <div class="pl pr">
             
             <h3 class="text-bold h4 mb color-blue-dark">Operating effort</h3>
 
-            <div class="drop-area p clearfix">
+            <div class="drop-area p clearfix" id="drop-area-<%= i%>">
               <% for i in 0..2 do %>
                 <span class="label label-default pull-left mr- mb- df at-c">
                   <i class="ionicons ion-pricetag color-grey-light mr- font-14 pull-left"></i>
-                  <span class="label__text">LER Pawl on excentric + 2nd pawl</span>
-                  <i class="ionicons ion-android-close pull-right color-grey-light font-14 ml"></i>
+                  <span class="label__text">Ease of door closing</span>
+                  <i class="label__close ionicons ion-android-close js-remove-label"></i>
                 </span>
               <% end %>
             </div>
@@ -45,18 +45,17 @@
             
           </div>
         </div>
-
-        <div class="card card--separator p">
+        <div class="df card card--separator p">
           <div class="pl pr">
             
             <h3 class="text-bold h4 mb color-blue-dark">Noise</h3>
 
-            <div class="drop-area p clearfix">
+            <div class="drop-area p clearfix" id="drop-area-<%= i%>">
               <% for i in 0..2 do %>
                 <span class="label label-default pull-left mr- mb- df at-c">
                   <i class="ionicons ion-pricetag color-grey-light mr- font-14 pull-left"></i>
-                  <span class="label__text">LER Pawl on excentric + 2nd pawl</span>
-                  <i class="ionicons ion-android-close pull-right color-grey-light font-14 ml"></i>
+                  <span class="label__text">Ease of door closing</span>
+                  <i class="label__close ionicons ion-android-close js-remove-label"></i>
                 </span>
               <% end %>
             </div>
@@ -64,81 +63,43 @@
             
           </div>
         </div>
-
-        <div class="card card--separator p">
-          <div class="pl pr">
-            
-            <h3 class="text-bold h4 mb color-blue-dark">Product cost</h3>
-
-            <div class="drop-area p clearfix">
-              
-            </div>
-            
-            
-          </div>
-        </div>
-
-        <div class="card card--separator p">
-          <div class="pl pr">
-            
-            <h3 class="text-bold h4 mb color-blue-dark">Fail safe</h3>
-
-            <div class="drop-area p clearfix">
-              
-            </div>
-            
-            
-          </div>
-        </div>
-
-        <div class="card card--separator p">
-          <div class="pl pr">
-            
-            <h3 class="text-bold h4 mb color-blue-dark">Space Roominess</h3>
-
-            <div class="drop-area p clearfix">
-              
-            </div>
-            
-            
-          </div>
-        </div>
-      
+      <% end %>
 
     </div>
+
     <div class="col-sm-4 df pl0">
-      <div class="bg-dark-blue-2 p pt+ f-1-0-auto">
+      <div class="bg-dark-blue-2 p">
         <div class="clearfix mb">
           <p class="h1 color-white mb+">12 Evaluation criteria</p>
           <a href="#" class="btn btn-outline color-white">Edit</a>
         </div>
+
+          <div id="suggested-categories">
           <% for i in 0..6 do %>
               
-              <div class="clearfix">
-                <span class="label label-primary mr- mb- pull-left">
+                <span class="label label-default">
                   <i class="ionicons ion-pricetag color-blue-3 mr- font-14 pull-left"></i>
-                  <span class="label__text">Ease of door closing</span>
+                  <span class="label__text">LER Pawl on excentric + 2nd pawl</span>
+                  <i class="label__close ionicons ion-android-close hidden js-remove-label"></i>
+                  <div class="label__number"><i class="ionicons ion-android-done"></i></div>
                 </span>
-                <div class="color-blue text-condensed font-14 mt- pull-left"><i class="ionicons ion-android-done"></i></div>
-              </div>
 
-              <div class="clearfix">
-                <span class="label label-primary mr- mb- pull-left">
+                <span class="label label-default">
                   <i class="ionicons ion-pricetag color-blue-3 mr- font-14 pull-left"></i>
-                  <span class="label__text">Ease of unlatching from full latch</span>
+                  <span class="label__text">Store enery in spring</span>
+                  <i class="label__close ionicons ion-android-close hidden js-remove-label"></i>
+                  <div class="label__number"><i class="ionicons ion-android-done"></i></div>
                 </span>
-                <div class="color-blue text-condensed font-14 mt- pull-left"><i class="ionicons ion-android-done"></i></div>
-              </div>
 
-              <div class="clearfix">
-                <span class="label label-primary mr- mb- pull-left">
+                <span class="label label-default">
                   <i class="ionicons ion-pricetag color-blue-3 mr- font-14 pull-left"></i>
                   <span class="label__text">2nd pawl</span>
+                  <i class="label__close ionicons ion-android-close hidden js-remove-label"></i>
+                  <div class="label__number "><i class="ionicons ion-android-done"></i></div>
                 </span>
-                <div class="color-blue text-condensed font-14 mt- pull-left"><i class="ionicons ion-android-done"></i></div>
-              </div>
 
           <% end %>
+          </div>
       </div>
     </div>
   </div>
@@ -147,3 +108,49 @@
 
 
 <%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-7.html", :link_back => "analysis-5.html" } %>
+
+<%= partial "partials/javascripts" %>
+
+<script>
+  var sortable = $('sortable');
+
+
+  dragula([$('drop-area-0'), $('drop-area-1'), $('drop-area-2'), $('drop-area-3'), $('drop-area-4'), $('drop-area-4'), $('suggested-categories')], {
+    copy: function (el, source) {
+        return source === $('suggested-categories')
+      },
+      accepts: function (el, target) {
+        return target !== $('suggested-categories')
+      }
+  }).on('drag', function (el) {
+    el.className = el.className.replace('ex-moved', '');
+  }).on('drop', function (el) {
+    el.className += ' ex-moved';
+  }).on('over', function (el, container) {
+    container.className += ' drop-area--droping';
+  }).on('out', function (el, container) {
+    container.className = container.className.replace('drop-area--droping', '');
+  });
+
+
+
+  function clickHandler (e) {
+    var target = e.target;
+    if (target === sortable) {
+      return;
+    }
+    target.innerHTML += ' [click!]';
+
+    setTimeout(function () {
+      target.innerHTML = target.innerHTML.replace(/ \[click!\]/g, '');
+    }, 500);
+  }
+
+  function $ (id) {
+    return document.getElementById(id);
+  }
+
+  $(".js-remove-label").click(function(){
+          $(this).parent().hide();
+  });
+</script>

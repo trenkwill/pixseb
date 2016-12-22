@@ -9,7 +9,7 @@
           <li>Categorizarion</li>
           <li>Connection PBSOL</li>
           <li class="active">Contradictions</li>
-          <li>Business Drivers</li>
+          <li class="next">Business Drivers</li>
           <li class="next">Evaluation criteria</li>
           <li class="next">Evaluation</li>
         </ul>
@@ -35,18 +35,18 @@
 
       <% for i in 1..3 do %>
 
-      <div class="card mb">
+      <div class="card animated mb">
 
         <div class="card__handles">
-          <i class="ionicons ion-ios-arrow-up color-white"></i>
-          <i class="ionicons ion-ios-arrow-down color-white"></i>
+          <i class="ionicons ion-ios-arrow-up color-white js-move-up"></i>
+          <i class="ionicons ion-ios-arrow-down color-white js-move-down"></i>
         </div>
 
-        <div class="p+">
+        <div class="contradictions p+">
 
             <p class="h1 pull-left">TC<%= i %></p>
 
-            <table class="table table-bordered bg-white mb0" style="margin-left: 50%; width: 50%;">
+            <table class="table table-bordered bg-white mb0 contradictions__tb-header">
               <tr>
                 <th colspan="2"><div class="text-center">Action parameter</div></th>
               </tr>
@@ -108,3 +108,26 @@
 
 
 <%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-5.html", :link_back => "analysis-3.html" } %>
+
+<%= partial "partials/javascripts" %>
+
+<script> 
+  $(".js-move-down").click(function(){
+    var card = $(this).parent().parent();
+    var nextCard = card.next(".card");
+    if (nextCard.length) {
+      nextCard.removeClass("slideInUp slideInDown wobble").addClass("slideInUp");
+      card.removeClass("slideInUp slideInDown wobble").addClass("slideInDown").insertAfter(nextCard);
+    }
+  });
+  $(".js-move-up").click(function(){
+    var card = $(this).parent().parent();
+    var prevCard = card.prev(".card");
+    if (prevCard.length) {
+      prevCard.removeClass("slideInUp slideInDown wobble").addClass("slideInDown");
+      card.removeClass("slideInUp slideInDown wobble").addClass("slideInUp").insertBefore(prevCard);
+    }
+  });
+
+  
+</script>
