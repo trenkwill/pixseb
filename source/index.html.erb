@@ -4,29 +4,41 @@ title: Welcome to Pixseb
 	
 <div class="container">
 	<nav class="navbar index__navbar  mb0">
-	    <%= link_to("Pixseb", "index.html" , class:"navbar-brand text-uppercase mt--") %>
-	    <a class="navbar-brand pl0" href="#">
-	    <% if current_page.data.menu_title %>
-	    <i class="ionicons ion-chevron-right color-grey-light mr-"></i>
-	    <% end %>
-	    <%= current_page.data.menu_title %>
-	    </a>
-	    <ul class="nav navbar-nav pull-left">
+
+      <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar bg-white"></span>
+              <span class="icon-bar bg-white"></span>
+              <span class="icon-bar bg-white"></span>
+            </button>
+              <%= link_to("Pixseb", "index.html" , class:"navbar-brand text-uppercase mt--") %>
+              <a class="navbar-brand pl0" href="#">
+              <% if current_page.data.menu_title %>
+              <i class="ionicons ion-chevron-right color-grey-light mr-"></i>
+              <% end %>
+              <%= current_page.data.menu_title %>
+              </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    <ul class="nav navbar-nav navbar-left">
 	      <li class="nav-item">
-	      	<%= link_to("Concept", "#concept" , class:"nav-link p text-medium") %>
+	      	<%= link_to("Concept", "#concept" , class:"nav-link p text-medium js-scroll-down") %>
 	      </li>
 	      <li class="nav-item">
-	      	<%= link_to("Testimonials", "#testimonials" , class:"nav-link p text-medium") %>
+	      	<%= link_to("Testimonials", "#testimonials" , class:"nav-link p text-medium js-scroll-down") %>
 	      </li>
 	      <li class="nav-item">
-	      	<%= link_to("Team", "#team" , class:"nav-link p text-medium") %>
+	      	<%= link_to("Team", "#team" , class:"nav-link p text-medium js-scroll-down") %>
 	      </li>
 	
 	    </ul>
-	    <ul class="nav navbar-nav pull-right">
+	    <ul class="nav navbar-nav navbar-right">
 	
 	      <li class="nav-item">
-	     	 <%= link_to("Pricing", "#" , class:"nav-link p text-medium") %>
+	     	 <%= link_to("Pricing", "#" , class:"nav-link p text-medium js-scroll-down") %>
 	      </li>
 	
 		  
@@ -47,7 +59,7 @@ title: Welcome to Pixseb
 	      <a href="#login" class="nav-item btn btn-round btn-white" data-toggle="modal">Login</a>
 	
 	    </ul>
-	    
+	   </div>
 	</nav>
 </div>
 	
@@ -78,17 +90,17 @@ title: Welcome to Pixseb
 		<div class="padded text-center">
 			
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-sm-4 mb">
 					<%= image_tag("analysis.png", width:"80", class:"mb") %>
 					<h2 class="h1 mb">Analysis</h2>
 					<p>From a base of 10,000 patents *. Semantic extraction & piloted analysis.</p>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 mb">
 					<%= image_tag("pixseb-logo.jpeg", width:"150", class:"mb") %>
 					<h2 class="h1 mb">Visualiser</h2>
 					<p>The SUN Diagram © to visualize its competitors and drive its innovation</p>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 mb">
 					<%= image_tag("presentation-icon.png", width:"80", class:"mb") %>
 					<h2 class="h1 mb">Collaborer</h2>
 					<p>Working with others. Export the complete report. Print The SUN Diagram © in poster. It's planned !</p>
@@ -344,7 +356,7 @@ title: Welcome to Pixseb
   <script>
   	$( '.js-float-label-wrapper' ).FloatLabel();
 
-  	$(document).on('click', 'a', function(event){
+  	$(document).on('click', '.js-scroll-down', function(event){
   	    event.preventDefault();
 
   	    $('html, body').animate({

@@ -6,14 +6,14 @@
       <div class="sun-diagram__frame">
         <%= image_tag("sun-diagram.svg", class:"js-panzoom") %>
       </div>
-      
+
     </div>
 
 
     <div class="col-sm-4">
 
       <div class="p+ sun-diagram__column">
-          
+
           <p class="h1 color-white mb">Ranking</p>
 
           <ul class="rankings">
@@ -48,7 +48,7 @@
           <div class="sun-diagram__mini-map js-panzoom-2">
               <div class="rectangle"></div>
 
-              
+
           </div>
       </div>
 
@@ -62,22 +62,21 @@
 <%= partial "partials/javascripts" %>
 
 <script>
-  
+
     $(function() {
-      
+
       var $section = $('body');
       $section.find('.js-panzoom').panzoom({
         $zoomIn: $section.find(".js-zoom-in"),
         $zoomOut: $section.find(".js-zoom-out"),
         $zoomRange: $section.find(".js-zoom-range"),
         $reset: $section.find(".js-reset"),
-        startTransform: 'scale(1)',
+        startTransform: 'scale(1) translateY(20px)',
         increment: 0.1,
         minScale: 1,
-
         contain: 'automatic'
       }).panzoom('zoom');
-      
+
 
       var frameHeight = $(".sun-diagram__frame").height(),
       frameWidth = $(".sun-diagram__frame").width(),
@@ -89,12 +88,12 @@
           containment: ".sun-diagram__mini-map",
           drag: function(event, ui) {
                 var pos = ui.position;
-                console.log(pos.left-150 + " " + pos.top);
+                console.log(pos.left-150 + " " + pos.top+20);
 
                 var $section = $('body');
-                $section.find('.js-panzoom').panzoom("pan", -pos.left-150, -pos.top);
+                $section.find('.js-panzoom').panzoom("pan", -pos.left-150, -pos.top+20);
             }
-      });      
+      });
     });
 
 </script>

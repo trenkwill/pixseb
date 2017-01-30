@@ -37,8 +37,8 @@ menu_title: E-Latch
             <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
           </div>
         </div>
-      
-        
+
+
         <div class="card p mb">
           <div class="row">
             <div class="col-xs-6">
@@ -59,7 +59,7 @@ menu_title: E-Latch
             </div>
           </div>
         </div>
-        
+
         <div class="card clearfix mb p">
           <p class="color-grey-light font-14 mb">Members</p>
           <% for i in 1..3 do %>
@@ -67,11 +67,11 @@ menu_title: E-Latch
             <%= image_tag "images/face-#{i}.jpg", class:"img-circle pull-left mr", width:"45" %>
             <div class="clearfix mt-">
               <p class="pull-left color-grey">Denis Cavallucci</p>
-              <a href="#" class="pull-right  color-grey-light"><i class="ionicons ion-close"></i></a>
+              <a href="#" class="pull-right  color-grey-light js-remove-member"><i class="ionicons ion-close"></i></a>
             </div>
           </div>
           <% end %>
-          <a href="#" class="btn btn--plus mt">Add a member</a>
+          <a href="#" class="btn btn--plus mt js-add-member">Add a member</a>
         </div>
 
         <div class="card clearfix mb p">
@@ -83,21 +83,40 @@ menu_title: E-Latch
               <p class="pull-left color-grey">Rapport_20129282.docx</p>
               <div class="pull-right list-inline">
                 <li>
-                  <a href="#" class="color-grey-light"><i class="ionicons ion-eye font-18"></i></a>
+                  <a href="#" class="color-grey-light" data-toggle="modal" data-target="#see-file"><i class="ionicons ion-eye font-18"></i></a>
                 </li>
                 <li>
-                  <a href="#" class="color-grey-light"><i class="ionicons ion-close"></i></a>
+                  <a href="#" class="color-grey-light js-remove-file"><i class="ionicons ion-close"></i></a>
                 </li>
               </div>
             </div>
           </div>
           <% end %>
-          <a href="#" class="btn btn--plus mt">Add a file</a>
+          <a href="#" class="btn btn--plus mt js-add-file">Add a file</a>
         </div>
-          
+
       </form>
     </div>
   </div>
+
+  <div class="modal fade" id="see-file">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Rapport_20129282.docx</h4>
+        </div>
+        <div class="modal-body">
+          <iframe src="http://www.cmefe.ch/cours/Notes/CMEFE-rapportscientifique.pdf" frameborder="0" width="100%" height="700"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </div><!-- container -->
 
 <%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "transition-1.html", :link_back => "index.html" } %>
@@ -109,5 +128,34 @@ menu_title: E-Latch
   $('.datepicker').datepicker();
 
   $( '.js-float-label-wrapper' ).FloatLabel();
+
+  $('.js-remove-member').click(function(e){
+      e.preventDefault();
+      $(this).parent().parent().fadeOut();
+  });
+
+  $('.js-remove-file').click(function(e){
+      e.preventDefault();
+      $(this).parent().parent().parent().parent().fadeOut();
+  });
+
+  $(".js-add-member").click(function(e){
+    e.preventDefault();
+    var newMember = $(
+      "<div class='row mb'>" +
+            "<div class='col-sm-4'><p class='color-grey-light font-14 mb0'>Member's picture</p><input type='file' class='form-control-2' /></div>" +
+              "<div class='col-sm-8'><input type='text' class='form-control' placeholder='Name' /></div>" +
+          "</div>");
+    $(this).before(newMember);
+  });
+
+  $(".js-add-file").click(function(e){
+    e.preventDefault();
+    var newMember = $(
+      "<div class='row mb'>" +
+            "<div class='col-sm-12'><p class='color-grey-light font-14 mb0'>Member's picture</p><input type='file' class='form-control-2' /></div>" +
+          "</div>");
+    $(this).before(newMember);
+  });
 </script>
 

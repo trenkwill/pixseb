@@ -21,7 +21,7 @@
 					</li>
 				</ul>
 			</div>
-			
+
 			<div class="col-sm-8">
 				<!-- Tab panes -->
 				<div class="tab-content account__tabs-content">
@@ -31,7 +31,7 @@
 						<p class="h1 mb">Password</p>
 
 						<form action="" class="home__form">
-						  
+
 						  <div class="input-wrap js-float-label-wrapper mb">
 						    <label for="">Current Password</label>
 						    <input type="password" name="current" id="current" class="form-control p">
@@ -41,7 +41,7 @@
 						    <label for="">New Password</label>
 						    <input type="password" name="current" id="current" class="form-control p">
 						  </div>
-						  
+
 						  <input type="submit" value="Submit" class="btn btn-lg btn-outline-blue color-blue bg-white mt">
 						</form>
 					</div>
@@ -86,14 +86,8 @@
 
 
 						  <div class="js-float-label-wrapper mb">
-						    <label for="">Birthday</label>
-
-						    <div class="input-group form-control date" data-provide="datepicker">
-                    			<input type="text" class="form-control p" placeholder="Birthday">
-			                    <div class="input-group-addon p0" style="left: 0px;">
-			                      <i class="ionicons ion-chevron-down"></i>
-			                    </div>
-                			</div>
+						    <label for="">Job Position</label>
+						    <input type="text" name="job" id="job" class="form-control p">
 						  </div>
 
 
@@ -102,13 +96,9 @@
 						    <input type="text" name="country" id="country" class="form-control p">
 						  </div>
 
-						  <div class="text-center">
-						  	<input type="submit" value="Save" class="btn btn-lg btn-outline-blue color-blue bg-white mt">
-						  </div>
+						  <input type="submit" value="Save" class="btn btn-lg btn-outline-blue color-blue bg-white mt">
+
 						</form>
-
-
-
 
 					</div>
 
@@ -117,7 +107,7 @@
 
 
 					<!-- Password tab -->
-					
+
 
 
 
@@ -183,24 +173,24 @@
 							<li class="clearfix mb">
 								<%= image_tag "face-1.jpg", class:"pull-left mr- img-circle", width:"60" %>
 								<p class="pull-left mt">Denis Cavallucci (You)</p>
-								
+
 							</li>
 
 							<li class="clearfix mb">
 								<%= image_tag "face-1.jpg", class:"pull-left mr- img-circle", width:"60" %>
 								<p class="pull-left mt">Robert Ortero</p>
-								
+
 							</li>
 
 							<li class="clearfix mb">
 								<%= image_tag "face-1.jpg", class:"pull-left mr- img-circle", width:"60" %>
 								<p class="pull-left mt">Robert Ortero</p>
-								
+
 							</li>
 							<li class="clearfix mb">
 								<%= image_tag "face-1.jpg", class:"pull-left mr- img-circle", width:"60" %>
 								<p class="pull-left mt">Robert Ortero</p>
-								
+
 							</li>
 
 							<a href="#" class="btn btn-lg color-white bg-blue mt">Add a member</a>
@@ -209,7 +199,7 @@
 							<a href="#" class="btn btn-outline-blue  color-blue bg-white mt">Save</a>
 
 
-							
+
 						</ul>
 
 					</div>
@@ -242,7 +232,7 @@
 	}
 </style>
 <script>
-	// this enables the inputs to have the labels in it, 
+	// this enables the inputs to have the labels in it,
 	// and when clicked animates the label to the top
 	$( '.js-float-label-wrapper' ).FloatLabel();
 

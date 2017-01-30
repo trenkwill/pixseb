@@ -29,4 +29,10 @@ $(".js-btn-loading").html("Please wait...").addClass("btn-outline color-white").
   setTimeout(function(){
     $(".js-btn-loading").html("Continue").addClass("bg-white color-blue-2").removeClass("btn-outline color-white");
   }, 3000);
+
+  setTimeout(function(){
+    var url = $(".js-btn-loading").attr('href');
+    window.location.href = url;
+  }, 3500);
+
 </script>

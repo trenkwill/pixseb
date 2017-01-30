@@ -4,11 +4,11 @@
     <div class="row">
       <div class="col-sm-9">
         <ul class="breadcrumbs">
-          <li>Sélection</li>
-          <li>Categorizarion</li>
-          <li>Extraction</li>
-          <li>Contradictions</li>
-          <li>Business Drivers</li>
+          <li><%= link_to("Sélection", "analysis.html" , class:"color-grey") %></li>
+          <li><%= link_to("Categorizarion", "analysis-2.html" , class:"color-grey") %></li>
+          <li><%= link_to("Connection PBSOL", "analysis-3.html" , class:"color-grey") %></li>
+          <li><%= link_to("Contradictions", "analysis-4.html" , class:"color-grey") %></li>
+          <li><%= link_to("Business Drivers", "analysis-5.html" , class:"color-grey") %></li>
           <li class="active">Evaluation criteria</li>
           <li class="next">Evaluation</li>
         </ul>
@@ -23,13 +23,19 @@
 <div class="container dragging-labels mb+ pb+">
   <div class="row df">
     <div class="col-sm-8 pr0">
-      <div class="card p card--separator">
-        <h1 class="mt">5 Business drivers</h1>
+      <div class="card p card--separator clearfix">
+        <h1 class="mt pull-left">5 Business drivers</h1>
+        <a href="#" class="btn btn-outline-grey pull-right mt js-add-driver ml">Add a business Drivers</a>
+        <a href="#" class="btn btn-outline-grey pull-right mt js-edit-drivers">Edit</a>
       </div>
-      <% for i in 0..4 do %>
+
+      <% for i in 1..5 do %>
         <div class="df card card--separator p">
+          <div class="card__handles" style="margin-top: -6px; margin-left: -40px;">
+          <i class="ionicons ion-android-close color-white js-remove-driver hidden"></i>
+        </div>
           <div class="pl pr">
-            
+
             <h3 class="text-bold h4 mb color-blue-dark">Operating effort</h3>
 
             <div class="drop-area p clearfix" id="drop-area-<%= i%>">
@@ -41,13 +47,16 @@
                 </span>
               <% end %>
             </div>
-            
-            
+
+
           </div>
         </div>
         <div class="df card card--separator p">
+          <div class="card__handles" style="margin-top: -6px; margin-left: -40px;">
+          <i class="ionicons ion-android-close color-white js-remove-driver hidden"></i>
+        </div>
           <div class="pl pr">
-            
+
             <h3 class="text-bold h4 mb color-blue-dark">Noise</h3>
 
             <div class="drop-area p clearfix" id="drop-area-<%= i%>">
@@ -59,8 +68,8 @@
                 </span>
               <% end %>
             </div>
-            
-            
+
+
           </div>
         </div>
       <% end %>
@@ -71,12 +80,12 @@
       <div class="bg-dark-blue-2 p">
         <div class="clearfix mb">
           <p class="h1 color-white mb+">12 Evaluation criteria</p>
-          <a href="#" class="btn btn-outline color-white">Edit</a>
+          <a href="#" class="btn btn-outline color-white js-edit-technologies">Edit</a>
         </div>
 
           <div id="suggested-categories">
           <% for i in 0..6 do %>
-              
+
                 <span class="label label-default">
                   <i class="ionicons ion-pricetag color-blue-3 mr- font-14 pull-left"></i>
                   <span class="label__text">LER Pawl on excentric + 2nd pawl</span>
@@ -112,15 +121,15 @@
 <%= partial "partials/javascripts" %>
 
 <script>
-  var sortable = $('sortable');
+  var sortable = document.getElementById('sortable');
 
 
-  dragula([$('drop-area-0'), $('drop-area-1'), $('drop-area-2'), $('drop-area-3'), $('drop-area-4'), $('drop-area-4'), $('suggested-categories')], {
+  dragula([document.getElementById('drop-area-0'), document.getElementById('drop-area-1'), document.getElementById('drop-area-2'), document.getElementById('drop-area-3'), document.getElementById('drop-area-4'), document.getElementById('drop-area-4'), document.getElementById('suggested-categories')], {
     copy: function (el, source) {
-        return source === $('suggested-categories')
+        return source === document.getElementById('suggested-categories')
       },
       accepts: function (el, target) {
-        return target !== $('suggested-categories')
+        return target !== document.getElementById('suggested-categories')
       }
   }).on('drag', function (el) {
     el.className = el.className.replace('ex-moved', '');
@@ -134,7 +143,7 @@
 
 
 
-  function clickHandler (e) {
+  function clickHandler(e) {
     var target = e.target;
     if (target === sortable) {
       return;
@@ -146,11 +155,46 @@
     }, 500);
   }
 
-  function $ (id) {
-    return document.getElementById(id);
-  }
-
   $(".js-remove-label").click(function(){
-          $(this).parent().hide();
+    $(this).parent().hide();
+  });
+
+  $(".js-add-driver").click(function(e){
+    e.preventDefault();
+    var newBusinessDrive = $(
+      "<div class='card card--separator p'>"+
+        "<div class='pl pr' style='position:relative;'>" +
+
+          "<input type='text' class='form-control text-bold h4 mb color-blue-dark' style='font-size:20px;' placeholder='Driver name' autofocus >"+
+
+          "<div class='drop-area p clearfix' id='drop-area-0'></div>" +
+          "<i class='ionicons ion-android-close white js-remove-driver pull-left' style='position:absolute; right:30px; top: 20px;'></i>"+
+        "</div>" +
+
+      "</div>")
+    $(this).parent().after(newBusinessDrive);
+  });
+
+  $(document).on('click', '.js-remove-driver', function(){
+      var $that = $(this);
+      $that.parent().parent().addClass("animated zoomOut").slideUp();
+  });
+
+
+
+  $(".js-edit-technologies").click(function(e){
+
+    e.preventDefault();
+    $(this).toggleText('Done', 'Edit');
+    $(".label__close").toggleClass("hidden");
+    
+  });
+
+
+  $(".js-edit-drivers").click(function(e){
+    e.preventDefault();
+    $(this).toggleText('Done', 'Edit');
+    $(".js-remove-driver").toggleClass("hidden");
+    
   });
 </script>

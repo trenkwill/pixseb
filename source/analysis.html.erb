@@ -31,7 +31,7 @@ title: Pixseb | Analysis
             <label for="search-input"><span>Keywords, patent number</span></label>
             <input type="search" name="" id="input" class="form-control search__input"  title="">
           </div>
-          
+
           <a href="#" class="btn btn-primary search__btn">
             <i class="ionicons ion-ios-search-strong search__icon"></i>
             Search
@@ -44,8 +44,9 @@ title: Pixseb | Analysis
 
                 <div class="dropdown-menu p">
                   <ul class="list-unstyled">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item filter" data-filter="card" href="#">All</a></li>
+                    <li><a class="dropdown-item filter" data-filter="international" href="#">International</a></li>
+                    <li><a class="dropdown-item filter" data-filter="national" href="#">National</a></li>
                   </ul>
                 </div>
 
@@ -56,13 +57,14 @@ title: Pixseb | Analysis
 
                 <div class="dropdown-menu p">
                   <ul class="list-unstyled">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item filter" data-filter="field-1" href="#">Field 1</a></li>
+                    <li><a class="dropdown-item filter" data-filter="field-2" href="#">Field 2</a></li>
+                    <li><a class="dropdown-item filter" data-filter="field-3" href="#">Field 3</a></li>
                   </ul>
                 </div>
 
             </li>
-            
+
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">All content <i class="ionicons ion-chevron-down ml-"></i></a>
 
@@ -72,19 +74,43 @@ title: Pixseb | Analysis
                     <li><a class="dropdown-item" href="#">Action</a></li>
                   </ul>
                 </div>
-                
+
             </li>
+
+            <!-- <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Any date <i class="ionicons ion-chevron-down ml-"></i></a>
+
+                <div class="dropdown-menu p" style="width: 260px;">
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <div class="input-group date" data-provide="datepicker">
+                              <input type="text" class="form-control" placeholder="Start date">
+                              <div class="input-group-addon p0">
+                                <i class="ionicons ion-chevron-down"></i>
+                              </div>
+                          </div>
+                          <div class="input-group date" data-provide="datepicker">
+                              <input type="text" class="form-control" placeholder="End date">
+                              <div class="input-group-addon p0">
+                                <i class="ionicons ion-chevron-down"></i>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+
+            </li> -->
 
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Any date <i class="ionicons ion-chevron-down ml-"></i></a>
 
                 <div class="dropdown-menu p">
                   <ul class="list-unstyled">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Most recent</a></li>
+                    <li><a class="dropdown-item" href="#">Oldest</a></li>
                   </ul>
                 </div>
-                
+
             </li>
 
             <li class="dropdown">
@@ -96,53 +122,33 @@ title: Pixseb | Analysis
                     <li><a class="dropdown-item" href="#">Action</a></li>
                   </ul>
                 </div>
-                
+
             </li>
 
           </ul>
         </div>
-        
+
     </div>
 
   <div class="row df">
-    <div class="col-sm-8 pr0">
-          
-          <% for i in 0..2 do %>
-              <div class="df card card--separator pl pr pt- pb-">
-                <div class="card__file" style="background-image: url(images/plan.png);">
-                  <span></span>
-                  <i class="fa fa-file-text-o color-grey fa-2"></i>
-                </div>
-                <div class="p">
-                  
-                  <h3 class="text-bold h4 mb color-blue-dark">Electric power assisted door lock</h3>
-                  
-                  <p class="mb">With the door closed, the bolt-plate (2) notch (9) retains the door-jamb hasp bar (11,13), since the catch (3) prevents the forces opposed by the return spring (14) and compressed peripheral door seal (16) from rotating (F3)…</p>
-                
-                  <div class="clearfix">
-                    <p class="text-uppercase color-grey-light font-14 pull-left">DUPONT PATRICK [FR]; JACQUINET PHILIPPE [FR] <br> + VALEO SECURITE HABITACLE</p>
-                      
-                      <a href="#" class="btn btn--plus pull-right mr js-add-patent">Add</a>
-                  </div>
-                  </div>
-              </div>
-          <% end %>
+    <div class="col-sm-8 pr0 cards">
 
-          <% for i in 0..2 do %>
-              <div class="df card card--separator pl pr pt- pb-">
+          <% data.analysis.selection.each do |f| %>
+
+              <div class="df card card--separator pl pr pt- pb- international field-1">
                 <div class="card__file">
                   <span></span>
                   <i class="fa fa-file-text-o color-grey fa-2"></i>
                 </div>
                 <div class="p">
-                  
-                  <h3 class="text-bold h4 mb color-blue-dark">Electric power assisted door lock</h3>
-                  
+
+                  <h3 class="text-bold h4 mb color-blue-dark"><a href="#" data-toggle="modal" data-target="#open-doc"><%= f %></a></h3>
+
                   <p class="mb">With the door closed, the bolt-plate (2) notch (9) retains the door-jamb hasp bar (11,13), since the catch (3) prevents the forces opposed by the return spring (14) and compressed peripheral door seal (16) from rotating (F3)…</p>
-                
+
                   <div class="clearfix">
                     <p class="text-uppercase color-grey-light font-14 pull-left">DUPONT PATRICK [FR]; JACQUINET PHILIPPE [FR] <br> + VALEO SECURITE HABITACLE</p>
-                      
+
                       <a href="#" class="btn btn--plus pull-right mr js-add-patent">Add</a>
                   </div>
 
@@ -152,7 +158,7 @@ title: Pixseb | Analysis
     </div>
     <div class="col-sm-4 df pl0">
       <div class="bg-dark-blue-2">
-          
+
          <div class="p">
 
 
@@ -169,23 +175,51 @@ title: Pixseb | Analysis
                  optimal selection</p>
              </div>
             </div>
-           
-           
+
+
            <h2 class="h1 color-green text-condensed mb">27 Selected patents</h2>
          </div>
 
          <div class="patents">
-           <% for i in 1..4 do %>
+           <% data.analysis.selection.each do |f| %>
              <div class="patent">
-           
-                 <i class="fa fa-file-text-o fa-2 pull-left mr"></i>
-                 <p>Positive retraction latch locking dog for a rotating control …</p>
-                 <i class="ionicons ion-close"></i>
-           
+
+                 <div>
+                   <i class="fa fa-file-text-o fa-2 pull-left mr"></i>
+                   <p><%= f %></p>
+                 </div>
+                 <i class="ionicons ion-close js-remove-patent"></i>
+
              </div>
            <% end %>
           </div>
 
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="open-doc">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="p">
+            <div class="row">
+              <div class="col-sm-4">
+                <%= image_tag "images/plan.png", width:"100%"%>
+                <%= link_to("Download", "#" , class:"btn btn-primary") %>
+              </div>
+              <div class="col-sm-8">
+                <h4 class="mb">Positive retraction latch locking dog for a rotating control device</h4>
+                <p class="mb">A latch (116) and method for use is provided for latching an item of oilfield equipment (104). The latch has a housing (114) containing a latch member (116), and the latch member is movable between a radially engaged position in which it is engaged with the item of oilfield equipment, and a radially retracted position in which it is disengaged from the item of oilfield equipment. An actuator is configured to drive the latch member into the radially engaged position. Further, the actuator (118) is configured to drive the latch member toward the radially retracted position.</p>
+                <p class="mb">WEATHERFORD/LAMB, INC / RIOS, Aristeo III / CHAMBERS, James, W. / WAGONER, Danny, W / HARRALL, Simon, J</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="mr+">
+            <a href="#" class="btn btn--plus pull-right mr+ js-add-patent" data-dismiss="modal">Add</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -198,13 +232,29 @@ title: Pixseb | Analysis
 
 <%= partial "partials/javascripts" %>
 
+<script src="javascripts/isotope.pkgd.min.js"></script>
+
 <script>
 
-  $("#patents-meter").myfunc({
-    divFact:10,
-    eventListenerType:'keyup',
-    initDeg : 25
+
+$('.datepicker').datepicker({
+  orientation: 'right'
+});
+
+  var $cards = $('.cards').isotope({
+    // options
+    itemSelector: '.card',
+    layoutMode: 'fitRows'
   });
+
+
+
+ $('.filter').click(function(){
+      var filterValue = $( this ).attr('data-filter');
+      console.log(filterValue);
+      $cards.isotope({ filter: '.'+filterValue });
+  });
+
 
   function addPatent() {
     var i = 25;
@@ -213,7 +263,7 @@ title: Pixseb | Analysis
       event.preventDefault();
       var deg = i += 20;
       var inc = j += 1;
-      var html = $("<div class='patent'><i class='fa fa-file-text-o fa-2 pull-left mr'></i><p>Positive retraction latch locking dog for a rotating control …</p><i class='ionicons ion-close'></i></div>").addClass("animated zoomInDown");
+      var html = $("<div class='patent'><i class='fa fa-file-text-o fa-2 pull-left mr'></i><p>Positive retraction latch locking dog for a rotating control …</p><i class='ionicons ion-close js-remove-patent'></i></div>").addClass("animated zoomInDown");
       $(".patents").append(html);
       $(this).fadeOut().replaceWith(" <span class='added pull-right'><span class='added__check'><i class='ionicons ion-android-done'></i></span>Added</span>");
       $(".speedometer__number-of-patents__number").html(inc);
@@ -223,8 +273,16 @@ title: Pixseb | Analysis
 
   addPatent();
 
-  // this enables the inputs to have the labels in it, 
+  // this enables the inputs to have the labels in it,
   // and when clicked animates the label to the top
   $(".js-float-label-wrapper").FloatLabel();
-  
+
+
+
+  $(document).on('click', '.js-remove-patent', function(){
+      var $that = $(this);
+      $that.parent().addClass("animated zoomOut").slideUp();
+  });
+
+
 </script>

@@ -5,8 +5,8 @@
     <div class="row">
       <div class="col-sm-9">
         <ul class="breadcrumbs">
-          <li>Sélection</li>
-          <li>Categorizarion</li>
+          <li><%= link_to("Sélection", "analysis.html" , class:"color-grey") %></li>
+          <li><%= link_to("Categorizarion", "analysis-2.html" , class:"color-grey") %></li>
           <li class="active">Connection PBSOL</li>
           <li class="next">Contradictions</li>
           <li class="next">Business Drivers</li>
@@ -39,51 +39,68 @@
       <div class="bg-white p+">
         <div class="clearfix mb mt">
           <h1 class="pull-left text-bold">81 Problems</h1>
-          <div class="pull-right"><a href="#" class="btn btn-default color-blue">Edit</a></div>
+
+          <div class="pull-right">
+            <a href="#" class="btn btn-default color-blue js-edit-problems">Edit</a>
+            <a href="#" class="btn color-white bg-blue js-added-problem hidden">Done</a>
+          </div>
+
         </div>
-        <a href="#" class="btn btn--plus mb+">Add a problem</a>
-        
+        <a href="#" class="btn btn--plus mb+ js-add-problem">Add a problem</a>
+
         <% for i in 0..5 do %>
 
           <div class="mini-card mini-card--pink  at-c mb- p+ mr df" id="node<%= i %>">
-      
+
+              <i class="mini-card__delete ionicons ion-android-close hidden js-remove-mini-card"></i>
+
               <div class="mini-card__content">
                 <i class="fa fa-puzzle-piece fa-2 pull-left"></i>
-                
+
                 <p class="pull-left">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
+
+                <textarea class="form-control-2 hidden" row="30" col="100">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</textarea>
+
               </div>
-              
+
               <div class="mini-card__anchor" id="a">
                 <span></span>
               </div>
           </div>
-        
+
           <% end %>
-        
+
       </div>
 
     </div>
-    
-    
+
+
 
     <div class="pull-left jsplumb-container bg-dark-blue-2 pl0">
 
-  
+
       <div class=" p+">
           <div class="clearfix mb mt">
             <h1 class="text-bold pull-left color-white">81 partial solutions</h1>
-            <div class="pull-right"><a href="#" class="btn btn-default bg-dark-blue-2 color-white">Edit</a></div>
+            <div class="pull-right">
+              <a href="#" class="btn btn-default bg-dark-blue-2 color-white js-edit-solutions">Edit</a>
+              <a href="#" class="btn color-white bg-blue js-added-solution hidden">Done</a>
+            </div>
           </div>
 
-          <a href="#" class="btn btn--plus mb+">Add a problem</a>
-              
+          <a href="#" class="btn btn--plus mb+ js-add-solution">Add a solution</a>
+
               <% for i in 6..10 do %>
               <div class="mini-card mini-card--green mini-card mb- p+ df" id="node<%= i %>">
 
+                    <i class="mini-card__delete ionicons ion-android-close hidden js-remove-mini-card"></i>
+
                     <div class="mini-card__content">
                       <i class="fa fa-lightbulb-o pull-left fa-2"></i>
-                      
+
                       <p class="pull-left">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</p>
+
+                      <textarea class="form-control-2 hidden" row="30" col="100">« When seal load increases to improve sealing, release effort must remain low on either latch positions »</textarea>
                     </div>
 
                     <div class="mini-card__anchor">
@@ -92,7 +109,7 @@
 
               </div>
               <% end %>
-              
+
       </div>
     </div>
   </div>
@@ -101,7 +118,7 @@
 
 
 <nav class="navbar navbar-action-secondary navbar-fixed-bottom p">
-  
+
 
   <div class="pull-left df at-c">
     <p class="font-16 text-uppercase mr">3 items selected</p>
@@ -125,7 +142,7 @@
   jsPlumb.setContainer($(".jsplumb-container"));
 
   jsPlumb.ready(function(){
-     
+
      var endpointsPink = {
       endpoint: ["Dot",{radius: 20}],
       isSource: true,
@@ -145,7 +162,7 @@
       connectorOverlays: [ [ "Arrow", { location:1 } ] ],
       maxConnections: 5
     };
-    
+
     var anchorRight = [{anchor:"Right"}];
     var anchorLeft = [{anchor:"Left"}];
 
@@ -158,4 +175,109 @@
   $(window).resize(function(){
         jsPlumb.repaintEverything();
     });
+
+    $(document).on('click', '.js-remove-mini-card', function(){
+      var $that = $(this);
+      $that.parent().addClass("animated zoomOut").slideUp();
+    });
+    
+
+  $(".js-edit-problems").click(function(e){
+
+    e.preventDefault();
+    $(this).toggleText('Done', 'Edit');
+    $(".mini-card--pink .mini-card__delete").toggleClass("hidden");
+    $(".mini-card--pink textarea").toggleClass("hidden");
+    $(".mini-card--pink p").toggleClass("hidden");
+    
+  });
+
+  $(".js-edit-solutions").click(function(e){
+
+    e.preventDefault();
+    $(this).toggleText('Done', 'Edit');
+    $(".mini-card--green .mini-card__delete").toggleClass("hidden");
+    $(".mini-card--green textarea").toggleClass("hidden");
+    $(".mini-card--green p").toggleClass("hidden");
+
+  });
+
+
+  $(".js-add-problem").click(function(e){
+    e.preventDefault();
+    var newProblem = $(
+      "<div class='mini-card mini-card--pink mini-card--new mini-card mb- mr p+ df' id='node<%= i %>'>"+
+
+        "<i class='mini-card__delete ionicons ion-android-close js-remove-mini-card'></i>" +
+
+          "<div class='mini-card__content'>" +
+            "<i class='fa fa-puzzle-piece pull-left fa-2'></i>"+
+              "<textarea class='form-control-2' row='30' col='100'></textarea>"+
+          "</div>"+
+          
+
+          "<div class='mini-card__anchor'>"+
+              "<span></span>"+
+          "</div>"+
+
+      "</div>");
+    $(".js-edit-problems").addClass("hidden");
+    $(".js-added-problem").removeClass("hidden");
+    $(this).after(newProblem);
+  });
+
+  $(document).on('click', '.js-added-problem', function(e){
+      e.preventDefault();
+      $(".js-edit-problems").removeClass("hidden");
+      $(".js-added-problem").addClass("hidden");
+      var text = $(".mini-card--new textarea").val();
+      if (text != '') {
+        $(".mini-card--pink.mini-card--new .mini-card__content textarea").hide();
+        $(".mini-card--pink.mini-card--new .js-remove-mini-card").addClass("hidden");
+        $(".mini-card--pink.mini-card--new .mini-card__content").append(text);
+      } else {
+        $(".mini-card--pink.mini-card--new").addClass("hidden");
+      }
+  });
+
+  $(document).on('click', '.js-added-solution', function(e){
+      e.preventDefault();
+      $(".js-edit-solutions").removeClass("hidden");
+      $(".js-added-solution").addClass("hidden");
+      var text = $(".mini-card--green.mini-card--new textarea").val();
+      if (text != '') {
+        $(".mini-card--green.mini-card--new .mini-card__content textarea").hide();
+        $(".mini-card--green.mini-card--new .js-remove-mini-card").addClass("hidden");
+        $(".mini-card--green.mini-card--new .mini-card__content").append(text);
+      } else {
+        $(".mini-card--green.mini-card--new").addClass("hidden");
+      }
+  });
+
+  $(".js-add-solution").click(function(e){
+    e.preventDefault();
+    var newProblem = $(
+      "<div class='mini-card mini-card--green mini-card--new mini-card mb- p+ df' id='node<%= i %>'>"+
+
+        "<i class='mini-card__delete ionicons ion-android-close js-remove-mini-card'></i>" +
+
+          "<div class='mini-card__content'>" +
+            "<i class='fa fa-puzzle-piece pull-left fa-2'></i>"+
+              "<textarea class='form-control-2' row='30' col='100'></textarea>"+
+          "</div>"+
+          
+
+          "<div class='mini-card__anchor'>"+
+              "<span></span>"+
+          "</div>"+
+
+      "</div>");
+
+    $(".js-edit-solutions").addClass("hidden");
+    $(".js-added-solution").removeClass("hidden");
+    $(this).after(newProblem);
+    
+  });
+
+
 </script>

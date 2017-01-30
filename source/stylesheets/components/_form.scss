@@ -1,16 +1,30 @@
 .form-control {
-	border: none;
-	border-bottom: solid 1px $grey-lighter;
-	padding: 0;
-	box-shadow: none;
-	height: 55px;
-	&:focus {
-		border: none;
-		border-bottom: solid 1px $grey-lighter;
-		box-shadow: none;
-		outline: none;
-	}
+  border: none;
+  border-bottom: solid 1px $grey-lighter;
+  padding: 0;
+  box-shadow: none;
+  height: 55px;
+  &:focus {
+    border: none;
+    border-bottom: solid 1px $grey-lighter;
+    box-shadow: none;
+    outline: none;
+  }
 }
+.form-control-2 {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
 .input-group-addon {
 	background: none;
 	border: none;
@@ -117,9 +131,9 @@
 	font-size: 14px;
 	color: $grey-light;
 }
-.js-float-label-wrapper.focused input, 
-.js-float-label-wrapper.populated input, 
-.js-float-label-wrapper.focused textarea, 
+.js-float-label-wrapper.focused input,
+.js-float-label-wrapper.populated input,
+.js-float-label-wrapper.focused textarea,
 .js-float-label-wrapper.populated textarea {
 	padding-top: 1em !important;
 }

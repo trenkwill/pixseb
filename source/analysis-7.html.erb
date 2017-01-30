@@ -4,12 +4,12 @@
     <div class="row no-gutter">
       <div class="col-sm-9">
         <ul class="breadcrumbs">
-          <li>Sélection</li>
-          <li>Categorizarion</li>
-          <li>Extraction</li>
-          <li>Contradictions</li>
-          <li>Business Drivers</li>
-          <li>Evaluation criteria</li>
+          <li><%= link_to("Sélection", "analysis.html" , class:"color-grey") %></li>
+          <li><%= link_to("Categorizarion", "analysis-2.html" , class:"color-grey") %></li>
+          <li><%= link_to("Connection PBSOL", "analysis-3.html" , class:"color-grey") %></li>
+          <li><%= link_to("Contradictions", "analysis-4.html" , class:"color-grey") %></li>
+          <li><%= link_to("Business Drivers", "analysis-5.html" , class:"color-grey") %></li>
+          <li><%= link_to("Evaluation criteria", "analysis-6.html" , class:"color-grey") %></li>
           <li class="active">Evaluation</li>
         </ul>
         <p class="text-left text-italic color-grey text-light mt-">Adjust and evaluate the importance of your business drivers</p>
@@ -34,18 +34,18 @@
       <div class="card card--separator p">
         <a href="#" class="btn btn--plus">Add a business driver</a>
       </div>
-        
-        
+
+
       <div class="card card--separator p">
 
           <div class="clearfix">
             <div class="pull-left">Ease of closing</div>
-            
+
             <div class="pull-right">
               <input class="slider" data-slider-id='slider-green' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
             </div>
           </div>
-        
+
       </div>
 
 
@@ -53,40 +53,40 @@
 
           <div class="clearfix">
             <div class="pull-left">Ease of door opening</div>
-            
+
             <div class="pull-right">
               <input class="slider" data-slider-id='slider-orange' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
             </div>
           </div>
-        
+
       </div>
 
       <div class="card card--separator p">
 
           <div class="clearfix">
             <div class="pull-left">Ease of unlatching from full latch</div>
-            
+
             <div class="pull-right">
               <input class="slider" data-slider-id='slider-purple' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
             </div>
           </div>
-        
+
       </div>
 
       <div class="card card--separator p">
 
           <div class="clearfix">
             <div class="pull-left">Ease of unlatching from secondary latch</div>
-            
+
             <div class="pull-right">
               <input class="slider" data-slider-id='slider-turquoise' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
             </div>
           </div>
-        
+
       </div>
 
       <div class="card card--separator p pt+">
-          
+
       </div>
 
     </div>
@@ -94,7 +94,7 @@
 
     <div class="col-sm-4">
       <div class="bg-dark-blue-2 p pt+">
-          
+
           <canvas id="myChart" width="350" height="350"></canvas>
 
         <div class="color-white mt">
@@ -113,7 +113,7 @@
               </li>
             </ul>
         </div>
-          
+
       </div>
     </div>
 
@@ -128,35 +128,35 @@
             Noise
           </h1>
       </div>
-      
+
       <div class="card card--separator p">
 
           <div class="clearfix">
             <div class="pull-left">Quality of closing noise</div>
-            
+
             <div class="pull-right">
               <input class="slider" data-slider-id='slider-pink' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
             </div>
           </div>
-        
+
       </div>
 
       <div class="card card--separator p">
 
           <div class="clearfix">
             <div class="pull-left">Quality of unlatching and opening noise</div>
-            
+
             <div class="pull-right">
               <input class="slider" data-slider-id='slider-orange' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
             </div>
           </div>
-        
+
       </div>
 
   </div>
   <div class="col-sm-4">
       <div class="bg-dark-blue-2 p pt+">
-          
+
           <canvas id="myChart2" width="350" height="350"></canvas>
 
         <div class="color-white mt">
@@ -169,7 +169,7 @@
               </li>
             </ul>
         </div>
-          
+
       </div>
     </div>
   </div>
@@ -183,7 +183,7 @@
 
 
 <%= partial "partials/javascripts" %>
-    
+
 <script>
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
@@ -280,7 +280,7 @@
       }
   });
 
-  $('.slider').slider({
+  $('.slider').bootstrapSlider({
     formatter: function(value) {
       return 'Current value: ' + value;
     }
