@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Pixseb</title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.standalone.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css">
+
+    <link href="stylesheets/site.css" rel="stylesheet" />
+    <script src="javascripts/all.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/css/bootstrap-slider.min.css">
+  </head>
+
+  <body class="definition">
+
+
+
+      <nav class="navbar navbar-primary bg-faded mb0">
+          <a href="./" class="navbar-brand text-uppercase">Pixseb</a>
+          <a class="navbar-brand pl0" href="#">
+          <i class="ionicons ion-chevron-right color-grey-light mr-"></i>
+          E-Latch
+          </a>
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+              <a class="nav-link p text-medium" href="#"><i class="ionicons ion-chatbox-working color-grey-light mr- pull-left" style="font-size: 24px;"></i>Help</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle p text-medium" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN <i class="ionicons ion-chevron-down color-grey-light ml-"></i></a>
+              <div class="dropdown-menu p">
+                <ul class="list-unstyled">
+                  <li><a class="dropdown-item" href="#">EN</a></li>
+                  <li><a class="dropdown-item" href="#">FR</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p" href="#">
+                <div class="badge-container">
+                  <i class="fa fa-bell"></i>
+                  <span class="badge">3</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+
+              <a class="nav-link clearfix p0 jc-sb at-c dropdown-toggle " data-toggle="dropdown" style="display: flex;" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+
+                <img src="images/face-1.jpg" class="pull-left mr-" width="60" alt="Face 1" />
+
+                <div class="pull-left ml df flex-column">
+                  <p class="small color-grey-light">INSA Strasbourg</p> <p class="text-medium">Denis C.</p>
+                </div>
+
+                <i class="ionicons ion-chevron-down pull-right ml mr"></i>
+
+              </a>
+              <div class="dropdown-menu p">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="account.html#profile" class="dropdown-item">Profile</a>
+                  </li>
+                  <li>
+                    <a href="account.html#password" class="dropdown-item">Password</a>
+                  </li>
+                  <li>
+                    <a href="account.html#notifications" class="dropdown-item">Notifications</a>
+                  </li>
+                  <li>
+                    <a href="account.html#team" class="dropdown-item">Team</a>
+                  </li>
+                  <li>
+                    <a href="account.html#data-setting" class="dropdown-item">Data Setting</a>
+                  </li>
+                  <hr>
+                  <li><a href="" class="dropdown-item color-pink mb0">Disconect</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+      </nav>
+
+    
+
+<nav class="navbar navbar-secondary bg-faded pt-- pb--">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Definition <i class="ionicons ion-checkmark"></i></a>
+      </li>
+     
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Analysis <i class="ionicons ion-checkmark"></i></a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="#">SUN Diagram <i class="ionicons ion-checkmark"></i></a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Export <i class="ionicons ion-checkmark"></i></a>
+      </li>
+    </ul>
+    <span class="pull-right mt-">
+
+      <div class="member-group">
+        <span class="member-group__avatar">
+          <img src="images/face-1.jpg" class="" width="25" alt="Face 1" /></span>
+        <span class="member-group__avatar"><img src="images/face-2.jpg" class="" width="25" alt="Face 2" /></span>
+        <span class="member-group__avatar"><img src="images/face-3.jpg" class="" width="25" alt="Face 3" /></span>
+        <span class="member-group__text">3 MEMBERS</span>
+      </div>
+
+    </span>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <p class="text-left text-italic color-grey text-light mt">Please enter your project name and its description. You could also add other information like te starting date and the ending date. Adding members to the projects is also possible.</p>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+	<p class="text-bold color-grey pl pt pr">Progress</p>
+	<p class="pl pb pr"><span class="text-bold color-blue">10%  :</span> <span class="color-grey">SUN diagram set-up</span></p>
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+	  </div>
+	</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt+ pb+ mb+">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <form action="" method="POST" role="form">
+        <legend class="color-grey text-bold">Your new SUN Diagram</legend>
+
+        <div class="card p mb">
+          <div class="input-wrap js-float-label-wrapper">
+            <label for="">SUN Diagram name</label>
+            <input type="text" name="id" id="id" class="form-control">
+          </div>
+        </div>
+
+        <div class="card p mb">
+          <div class="input-wrap js-float-label-wrapper">
+            <label for="">Description</label>
+            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+          </div>
+        </div>
+
+
+        <div class="card p mb">
+          <div class="row">
+            <div class="col-xs-6">
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" class="form-control" placeholder="Start date">
+                    <div class="input-group-addon p0">
+                      <i class="ionicons ion-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" class="form-control" placeholder="End date">
+                    <div class="input-group-addon p0">
+                      <i class="ionicons ion-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card clearfix mb p">
+          <p class="color-grey-light font-14 mb">Members</p>
+          <div class="clearfix mb">
+            <img src="images/face-1.jpg" class="img-circle pull-left mr" width="45" alt="Face 1" />
+            <div class="clearfix mt-">
+              <p class="pull-left color-grey">Denis Cavallucci</p>
+              <a href="#" class="pull-right  color-grey-light js-remove-member"><i class="ionicons ion-close"></i></a>
+            </div>
+          </div>
+          <div class="clearfix mb">
+            <img src="images/face-2.jpg" class="img-circle pull-left mr" width="45" alt="Face 2" />
+            <div class="clearfix mt-">
+              <p class="pull-left color-grey">Denis Cavallucci</p>
+              <a href="#" class="pull-right  color-grey-light js-remove-member"><i class="ionicons ion-close"></i></a>
+            </div>
+          </div>
+          <div class="clearfix mb">
+            <img src="images/face-3.jpg" class="img-circle pull-left mr" width="45" alt="Face 3" />
+            <div class="clearfix mt-">
+              <p class="pull-left color-grey">Denis Cavallucci</p>
+              <a href="#" class="pull-right  color-grey-light js-remove-member"><i class="ionicons ion-close"></i></a>
+            </div>
+          </div>
+          <a href="#" class="btn btn--plus mt js-add-member">Add a member</a>
+        </div>
+
+        <div class="card clearfix mb p">
+          <p class="color-grey-light font-14 mb">Files &amp; usefull links</p>
+          <div class="clearfix mb">
+            <i class="ionicons ion-document pull-left mr icon-circle"></i>
+            <div class="clearfix mt-">
+              <p class="pull-left color-grey">Rapport_20129282.docx</p>
+              <div class="pull-right list-inline">
+                <li>
+                  <a href="#" class="color-grey-light" data-toggle="modal" data-target="#see-file"><i class="ionicons ion-eye font-18"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="color-grey-light js-remove-file"><i class="ionicons ion-close"></i></a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix mb">
+            <i class="ionicons ion-document pull-left mr icon-circle"></i>
+            <div class="clearfix mt-">
+              <p class="pull-left color-grey">Rapport_20129282.docx</p>
+              <div class="pull-right list-inline">
+                <li>
+                  <a href="#" class="color-grey-light" data-toggle="modal" data-target="#see-file"><i class="ionicons ion-eye font-18"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="color-grey-light js-remove-file"><i class="ionicons ion-close"></i></a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix mb">
+            <i class="ionicons ion-document pull-left mr icon-circle"></i>
+            <div class="clearfix mt-">
+              <p class="pull-left color-grey">Rapport_20129282.docx</p>
+              <div class="pull-right list-inline">
+                <li>
+                  <a href="#" class="color-grey-light" data-toggle="modal" data-target="#see-file"><i class="ionicons ion-eye font-18"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="color-grey-light js-remove-file"><i class="ionicons ion-close"></i></a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn--plus mt js-add-file">Add a file</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="see-file">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Rapport_20129282.docx</h4>
+        </div>
+        <div class="modal-body">
+          <iframe src="http://www.cmefe.ch/cours/Notes/CMEFE-rapportscientifique.pdf" frameborder="0" width="100%" height="700"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div><!-- container -->
+
+<nav class="navbar navbar-action navbar-fixed-bottom p-">
+	
+	<a href="./" class="btn btn-outline color-white pull-left">Back</a>
+
+	<div class="pull-right">
+	  	<div class="clearfix">
+	  		<p class="color-white pull-left mr">Last modified on 03/12/2017 à 12:17, <br>Par Denis C. - INSA</p>
+	  		<a href="transition-1.html" class="btn btn-default color-blue-2 pull-right js-btn-loading">Continue</a>
+	  	</div>
+	</div>
+
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+
+<script src="javascripts/jquery.FloatLabel.js"></script>
+
+<script src="javascripts/speedometer.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.0.7/jsPlumb.min.js"></script>
+
+<script src="javascripts/jquery.panzoom.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
+
+<script src="javascripts/Chart.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/bootstrap-slider.min.js"></script>
+
+
+<script>
+	jQuery.fn.extend({
+	  toggleText: function (a, b){
+	      var that = this;
+	          if (that.text() != a && that.text() != b){
+	              that.text(a);
+	          }
+	          else
+	          if (that.text() == a){
+	              that.text(b);
+	          }
+	          else
+	          if (that.text() == b){
+	              that.text(a);
+	          }
+	      return this;
+	  }
+	});
+</script>
+
+<script>
+
+  $('.datepicker').datepicker();
+
+  $( '.js-float-label-wrapper' ).FloatLabel();
+
+  $('.js-remove-member').click(function(e){
+      e.preventDefault();
+      $(this).parent().parent().fadeOut();
+  });
+
+  $('.js-remove-file').click(function(e){
+      e.preventDefault();
+      $(this).parent().parent().parent().parent().fadeOut();
+  });
+
+  $(".js-add-member").click(function(e){
+    e.preventDefault();
+    var newMember = $(
+      "<div class='row mb'>" +
+            "<div class='col-sm-4'><p class='color-grey-light font-14 mb0'>Member's picture</p><input type='file' class='form-control-2' /></div>" +
+              "<div class='col-sm-8'><input type='text' class='form-control' placeholder='Name' /></div>" +
+          "</div>");
+    $(this).before(newMember);
+  });
+
+  $(".js-add-file").click(function(e){
+    e.preventDefault();
+    var newMember = $(
+      "<div class='row mb'>" +
+            "<div class='col-sm-12'><p class='color-grey-light font-14 mb0'>Member's picture</p><input type='file' class='form-control-2' /></div>" +
+          "</div>");
+    $(this).before(newMember);
+  });
+</script>
+
+
+
+  </body>
+</html>
