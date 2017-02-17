@@ -15,3 +15,4 @@ gem 'middleman-livereload'
 gem 'bootstrap-sass', '3.3.7'
 gem 'font-awesome-sass', '4.7.0'
 
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'

@@ -753,8 +753,8 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-81"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
-                            <tspan x="8" y="18">FIAT</tspan>
+                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
+                            <tspan x="12" y="18">FIAT</tspan>
                         </text>
                     </g>
                     <g id="Group-4-Copy-10" transform="translate(270.000000, 354.000000)">
@@ -763,8 +763,8 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-83"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" transform="translate(54.500000, 26.000000) scale(-1, 1) translate(-54.500000, -26.000000) " points="49 31 49 21 60 21"></polygon>
-                        <text id="BROSE" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
-                            <tspan x="8" y="18">BROSE</tspan>
+                        <text id="BROSE" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
+                            <tspan x="5" y="18">BROSE</tspan>
                         </text>
                     </g>
                     <g id="Group-4-Copy" transform="translate(535.000000, 291.000000)">
@@ -773,7 +773,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-85"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="GM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
+                        <text id="GM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
                             <tspan x="8" y="18">GM</tspan>
                         </text>
                     </g>
@@ -783,7 +783,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-87"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="ARM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
+                        <text id="ARM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
                             <tspan x="8" y="18">ARM</tspan>
                         </text>
                     </g>
@@ -793,7 +793,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-89"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
+                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
                             <tspan x="8" y="18">FIAT</tspan>
                         </text>
                     </g>
@@ -807,7 +807,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-91"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
+                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
                             <tspan x="8" y="18">FIAT</tspan>
                         </text>
                     </g>
@@ -817,7 +817,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-93"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
+                        <text id="FIAT" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
                             <tspan x="8" y="18">FIAT</tspan>
                         </text>
                     </g>
@@ -827,7 +827,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-95"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="ARM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
+                        <text id="ARM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
                             <tspan x="8" y="18">ARM</tspan>
                         </text>
                     </g>
@@ -837,14 +837,14 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-97"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="ROLTRA" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#53B6EB">
+                        <text id="ROLTRA" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#53B6EB">
                             <tspan x="8" y="18">ROLTRA</tspan>
                         </text>
                     </g>
                     <g id="Group-4-Copy-7" transform="translate(358.000000, 134.000000)">
                         <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="0" width="62" height="24"></rect>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="BROSE" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#53B6EB">
+                        <text id="BROSE" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#53B6EB">
                             <tspan x="8" y="18">BROSE</tspan>
                         </text>
                     </g>
@@ -854,7 +854,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-99"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="VW" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#53B6EB">
+                        <text id="VW" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#53B6EB">
                             <tspan x="8" y="18">VW</tspan>
                         </text>
                     </g>
@@ -864,7 +864,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-101"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="VALEO" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#53B6EB">
+                        <text id="VALEO" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#53B6EB">
                             <tspan x="8" y="18">VALEO</tspan>
                         </text>
                     </g>
@@ -874,7 +874,7 @@
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-103"></use>
                         </g>
                         <polygon id="Triangle" fill="#FFFFFF" points="0 31 0 21 11 21"></polygon>
-                        <text id="ARM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="16" font-style="condensed" font-weight="bold" fill="#506270">
+                        <text id="ARM" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" fill="#506270">
                             <tspan x="8" y="18">ARM</tspan>
                         </text>
                     </g>

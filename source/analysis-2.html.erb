@@ -58,6 +58,11 @@
         <div class="clearfix mb">
           <p class="h1 color-white mb+">Suggested technologies</p>
           <a href="#" class="btn btn-outline color-white js-edit-technologies">Edit</a>
+
+          <div class="mt js-show-input-technologies hidden">
+            <input type="email" class="form-control-2" id="" placeholder="Add technologies">
+          </div>
+
         </div>
 
           <div id="suggested-categories">
@@ -164,7 +169,8 @@
     e.preventDefault();
     $(this).toggleText('Done', 'Edit');
     $(".label__close").toggleClass("hidden");
-    
+    $(".js-show-input-technologies").toggleClass("hidden");
+
   });
 
 

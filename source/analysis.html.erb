@@ -263,7 +263,9 @@ $('.datepicker').datepicker({
       event.preventDefault();
       var deg = i += 20;
       var inc = j += 1;
-      var html = $("<div class='patent'><i class='fa fa-file-text-o fa-2 pull-left mr'></i><p>Positive retraction latch locking dog for a rotating control …</p><i class='ionicons ion-close js-remove-patent'></i></div>").addClass("animated zoomInDown");
+      var content = $(this).parent().parent().find("h3 a").text();
+      console.log(content);
+      var html = $("<div class='patent'><i class='fa fa-file-text-o fa-2 pull-left mr'></i><p>"+content+"</p><i class='ionicons ion-close js-remove-patent'></i></div>").addClass("animated zoomInDown");
       $(".patents").append(html);
       $(this).fadeOut().replaceWith(" <span class='added pull-right'><span class='added__check'><i class='ionicons ion-android-done'></i></span>Added</span>");
       $(".speedometer__number-of-patents__number").html(inc);
