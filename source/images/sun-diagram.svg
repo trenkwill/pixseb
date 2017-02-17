@@ -377,20 +377,20 @@
                 </g>
                 <g id="Technologies" transform="translate(542.000000, 711.000000)" fill="#1673BC">
                     <g id="Group-35" transform="translate(378.000000, 488.000000)">
-                        <rect id="Rectangle-6" fill-opacity="0.2" x="0" y="0" width="106" height="24" rx="12"></rect>
+                        <rect id="Rectangle-6" fill-opacity="0.2" x="0" y="0" width="120" height="24" rx="12"></rect>
                         <text id="G10-Pre-cinching" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal">
                             <tspan x="6" y="17">G10 Pre-cinching</tspan>
                         </text>
                     </g>
                     <g id="Group-34" transform="translate(254.000000, 392.000000)">
-                        <rect id="Rectangle-6-Copy-4" fill-opacity="0.2" x="0" y="0" width="106" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy-4" fill-opacity="0.2" x="0" y="0" width="120" height="36" rx="18"></rect>
                         <text id="G3-Pawl-is-over-cent" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="12" y="17">G3 Pawl is over</tspan>
                             <tspan x="12" y="31">centre toggle</tspan>
                         </text>
                     </g>
                     <g id="Group-36" transform="translate(514.000000, 472.000000)">
-                        <rect id="Rectangle-6-Copy" fill-opacity="0.2" x="0" y="0" width="106" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy" fill-opacity="0.2" x="0" y="0" width="120" height="36" rx="18"></rect>
                         <text id="G2-Over-centre-Toggl" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="13" y="17">G2 Over centre</tspan>
                             <tspan x="13" y="31">Toggle</tspan>
@@ -404,54 +404,54 @@
                         </text>
                     </g>
                     <g id="Group-33" transform="translate(97.000000, 476.000000)">
-                        <rect id="Rectangle-6-Copy-5" fill-opacity="0.2" x="0" y="0" width="106" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy-5" fill-opacity="0.2" x="0" y="0" width="120" height="36" rx="18"></rect>
                         <text id="G4-Store-energy-in-s" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="10" y="17">G4 Store energy</tspan>
                             <tspan x="10" y="31">in spring</tspan>
                         </text>
                     </g>
                     <g id="Group-31" transform="translate(1.000000, 247.000000)">
-                        <rect id="Rectangle-6-Copy-7" fill-opacity="0.2" x="0" y="0" width="85" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy-7" fill-opacity="0.2" x="0" y="0" width="100" height="36" rx="18"></rect>
                         <text id="G6-Rowlling-contact" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="9" y="17">G6 Rowlling</tspan>
                             <tspan x="9" y="31">contact</tspan>
                         </text>
                     </g>
                     <g id="Group-30" transform="translate(0.000000, 105.000000)">
-                        <rect id="Rectangle-6-Copy-8" fill-opacity="0.2" x="0" y="0" width="118" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy-8" fill-opacity="0.2" x="0" y="0" width="130" height="36" rx="18"></rect>
                         <text id="G7.1-Clawlinked-to-p" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="12" y="17">G7.1 Clawlinked </tspan>
                             <tspan x="12" y="31">to pawl by toggle</tspan>
                         </text>
                     </g>
                     <g id="Group-32" transform="translate(6.000000, 423.000000)">
-                        <rect id="Rectangle-6-Copy-6" fill-opacity="0.2" x="0" y="0" width="95" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy-6" fill-opacity="0.2" x="0" y="0" width="110" height="36" rx="18"></rect>
                         <text id="G2-Over-centre-Toggl-Copy-7" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="10" y="17">G2 Over</tspan>
                             <tspan x="10" y="31">centre Toggle</tspan>
                         </text>
                     </g>
                     <g id="Group-39" transform="translate(608.000000, 112.000000)">
-                        <rect id="Rectangle-6-Copy-9" fill-opacity="0.2" x="0" y="0" width="85" height="24" rx="12"></rect>
+                        <rect id="Rectangle-6-Copy-9" fill-opacity="0.2" x="0" y="0" width="100" height="24" rx="12"></rect>
                         <text id="G5-2nd-pawl" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal">
                             <tspan x="8" y="18">G5 2nd pawl</tspan>
                         </text>
                     </g>
                     <g id="Group-40" transform="translate(605.000000, 4.000000)">
-                        <rect id="Rectangle-6-Copy-10" fill-opacity="0.2" x="0" y="0" width="94" height="24" rx="12"></rect>
+                        <rect id="Rectangle-6-Copy-10" fill-opacity="0.2" x="0" y="0" width="110" height="24" rx="12"></rect>
                         <text id="G9-2-way-pawl" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="6" y="18">G9 2 way pawl</tspan>
                         </text>
                     </g>
                     <g id="Group-38" transform="translate(588.000000, 201.000000)">
-                        <rect id="Rectangle-6-Copy-3" fill-opacity="0.2" x="0" y="0" width="132" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy-3" fill-opacity="0.2" x="0" y="0" width="145" height="36" rx="18"></rect>
                         <text id="G7-2&amp;3-Pawl-is-under" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="13" y="17">G7 2&amp;3 Pawl is</tspan>
                             <tspan x="13" y="31">under centre toggle</tspan>
                         </text>
                     </g>
                     <g id="Group-29" transform="translate(2.000000, 0.000000)">
-                        <rect id="Rectangle-6-Copy-11" fill-opacity="0.2" x="0" y="0" width="129" height="36" rx="18"></rect>
+                        <rect id="Rectangle-6-Copy-11" fill-opacity="0.2" x="0" y="0" width="140" height="36" rx="18"></rect>
                         <text id="G8-LER-Pawl-on-excen" font-family="Roboto Bold, Helvetica, Roboto Condensed, Roboto Condensed" font-size="14" font-style="condensed" font-weight="normal" line-spacing="14">
                             <tspan x="9" y="17">G8 LER Pawl on</tspan>
                             <tspan x="9" y="31">excentric + 2nd pawl</tspan>
