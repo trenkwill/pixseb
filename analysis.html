@@ -83,7 +83,7 @@
                     <a href="account.html#data-setting" class="dropdown-item">Data Setting</a>
                   </li>
                   <hr>
-                  <li><a href="" class="dropdown-item color-pink mb0">Disconect</a></li>
+                  <li><a href="" class="dropdown-item color-pink mb0">Disconnect</a></li>
                 </ul>
               </div>
             </li>
@@ -581,7 +581,7 @@ $('.datepicker').datepicker({
   function addPatent() {
     var i = 25;
     var j = 0;
-    $(".js-add-patent").click(function(event){
+    $(document).on('click', '.js-add-patent', function(event){
       event.preventDefault();
       var deg = i += 20;
       var inc = j += 1;
@@ -589,7 +589,7 @@ $('.datepicker').datepicker({
       console.log(content);
       var html = $("<div class='patent'><i class='fa fa-file-text-o fa-2 pull-left mr'></i><p>"+content+"</p><i class='ionicons ion-close js-remove-patent'></i></div>").addClass("animated zoomInDown");
       $(".patents").append(html);
-      $(this).fadeOut().replaceWith(" <span class='added pull-right'><span class='added__check'><i class='ionicons ion-android-done'></i></span>Added</span>");
+      $(this).fadeOut().replaceWith("<span class='added pull-right'><span class='added__check'><i class='ionicons ion-android-done'></i></span>Added</span>");
       $(".speedometer__number-of-patents__number").html(inc);
       $(".speedometer__speednobe").css("transform", 'rotate('+deg+'deg)');
     });
@@ -604,8 +604,11 @@ $('.datepicker').datepicker({
 
 
   $(document).on('click', '.js-remove-patent', function(){
-      var $that = $(this);
+      var $that = $(this),
+      addButton = "<a href='#' class='btn btn--plus pull-right mr js-add-patent'>Add</a>"
+      $(".added").replaceWith(addButton);
       $that.parent().addClass("animated zoomOut").slideUp();
+
   });
 
 
