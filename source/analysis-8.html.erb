@@ -25,14 +25,14 @@
 
     <% for i in 1..2 do %>
     <div class="p mb">
-        
+
         <h1 class="mb">ARM</h1>
-      
-        
+
+
           <div class="card card--separator p">
               <div class="df jc-sb at-c">
                 <p>Parametre d'evaluation</p>
-                          
+
                   <div class="df jc-sb at-c">
                     <p class="mr">State of the art</p>
                     <div class="btn-group" role="group" aria-label="...">
@@ -47,7 +47,7 @@
           <div class="card card--separator p">
               <div class="df jc-sb at-c">
                 <p>Parametre d'evaluation</p>
-                          
+
                   <div class="df jc-sb at-c">
                     <p class="mr">State of the art</p>
                     <div class="btn-group" role="group" aria-label="...">
@@ -62,7 +62,7 @@
           <div class="card card--separator p">
               <div class="df jc-sb at-c">
                 <p>Parametre d'evaluation</p>
-                          
+
                   <div class="df jc-sb at-c">
                     <p class="mr">State of the art</p>
                     <div class="btn-group" role="group" aria-label="...">
@@ -74,8 +74,8 @@
 
               </div>
           </div>
-        
-          
+
+
     </div>
 
     <% end %>
@@ -84,3 +84,13 @@
 
 
 <%= partial "partials/action-bar", :locals => { :text => "Last modified on 03/12/2017 à 12:17,",:text2 => "Par Denis C. - INSA", :link => "sun-diagram.html", :link_back => "analysis-7.html" } %>
+
+<%= partial "partials/javascripts" %>
+
+<script>
+  $('.btn').click(function(){
+    $(this).prev().removeClass('active');
+    $(this).next().removeClass('active');
+    $(this).toggleClass('active');
+  });
+</script>
