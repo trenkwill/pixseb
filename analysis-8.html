@@ -327,7 +327,10 @@
 <script>
   $('.btn').click(function(){
     $(this).prev().removeClass('active');
+    $(this).prev().prev().removeClass('active');
+
     $(this).next().removeClass('active');
+    $(this).next().next().removeClass('active');
     $(this).toggleClass('active');
   });
 </script>
