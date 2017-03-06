@@ -149,8 +149,19 @@
       }, 500);
 
   });
+  $(document).on('click', '.ex-moved .js-remove-all-labels', function(){
 
-  $(document).on('click', '.js-remove-all-labels', function(){
+      var $that = $(this);
+
+      $that.parent().addClass("animated zoomOut");
+
+      setTimeout(function(){
+        $that.parent().hide();
+      }, 500);
+
+  });
+
+  $(document).on('click', '.bg-dark-blue-2 .js-remove-all-labels', function(){
 
       var $that = $(this),
       dataTitle = $that.parent().data("title"),
